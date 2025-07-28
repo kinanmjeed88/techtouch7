@@ -1,0 +1,42 @@
+{{ define "main" }}
+<article class="single-post">
+    <header class="post-header">
+        <h1>{{ .Title }}</h1>
+        <div class="post-meta">
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+            {{ if .Params.category }}
+            <span class="post-category">{{ .Params.category }}</span>
+            {{ end }}
+        </div>
+    </header>
+    
+    <div class="post-content">
+        {{ .Content }}
+    </div>
+    
+    {{ if .Params.download_link }}
+    <div class="download-section">
+        <a href="{{ .Params.download_link }}" target="_blank" class="download-button">
+            <i class="fas fa-download"></i> تحميل
+        </a>
+    </div>
+    {{ end }}
+    
+    <footer class="post-footer">
+        <div class="post-navigation">
+            {{ if .PrevInSection }}
+            <a href="{{ .PrevInSection.Permalink }}" class="prev-post">
+                <i class="fas fa-arrow-right"></i> المنشور السابق
+            </a>
+            {{ end }}
+            
+            {{ if .NextInSection }}
+            <a href="{{ .NextInSection.Permalink }}" class="next-post">
+                المنشور التالي <i class="fas fa-arrow-left"></i>
+            </a>
+            {{ end }}
+        </div>
+    </footer>
+</article>
+{{ end }}
+

@@ -1,0 +1,20 @@
+baseURL = "https://techtouch.example.com"
+languageCode = "ar"
+title = "قناة TechTouch"
+defaultContentLanguage = "ar"
+
+[params]
+  description = "اضغط على أي قسم للانتقال إليه مباشرة"
+  author = "TechTouch"
+  
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[menu]
+  [[menu.main]]
+    name = "الرئيسية"
+    url = "/"
+    weight = 1
+
