@@ -8,7 +8,7 @@ category: movies
 description: "تطبيق معدل تابع لشركة ايرثلنك ويعمل لجميع الشبكات "
 link: https://t.me/techtouch7/173
 ---
-![](/images/uploads/1000109848.jpg)
+![Cinemana X ايرثلنك](/images/uploads/1000109848.jpg "Cinemana X ايرثلنك")
 
 # تـ Cinemana X ايرثلنك
 
