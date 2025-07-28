@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 summary: تطبيق Cinemana X لمشاهدة الأفلام والمسلسلات بجودة عالية
 date: 2025-01-13
 download_link: https://t.me/techtouch7/173
