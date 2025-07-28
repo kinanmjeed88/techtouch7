@@ -1,9 +1,12 @@
 ---
-title: "تـ Cinemana X ايرثلنك"
+draft: true
+summary: تطبيق Cinemana X لمشاهدة الأفلام والمسلسلات بجودة عالية
 date: 2025-01-13
-category: "أفلام"
-download_link: "https://t.me/techtouch7/173"
-summary: "تطبيق Cinemana X لمشاهدة الأفلام والمسلسلات بجودة عالية"
+download_link: https://t.me/techtouch7/173
+title: تـ Cinemana X ايرثلنك
+category: movies
+description: "تطبيق معدل تابع لشركة ايرثلنك ويعمل لجميع الشبكات "
+link: https://t.me/techtouch7/173
 ---
 
 # تـ Cinemana X ايرثلنك
