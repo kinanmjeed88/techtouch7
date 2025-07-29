@@ -6,6 +6,8 @@ category: movies
 description: تطبيقات افـلام
 link: "1"
 ---
+
+
 ![](/images/uploads/1000109981.png)
 
 ```
@@ -21,5 +23,4 @@ link: "1"
 
 ❍ يدعم الهاتف والتلفاز 
 التحمبل
-
 ```
