@@ -14,6 +14,14 @@
         {{ .Content }}
     </div>
     
+    {{ if .Params.download_link }}
+    <div class="download-section">
+        <a href="{{ .Params.download_link }}" target="_blank" class="download-button">
+            <i class="fas fa-download"></i> تحميل
+        </a>
+    </div>
+    {{ end }}
+    
     {{ if .Params.download_file }}
     <div class="download-section">
         <a href="{{ .Params.download_file }}" target="_blank" class="download-button">
