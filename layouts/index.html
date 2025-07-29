@@ -1,19 +1,285 @@
-{{ define "main" }}
-    <h1>آخر المنشورات</h1>
-    {{ range .Site.RegularPages }}
-        <article>
-            <h2>
-                <a href="{{ .Permalink }}">{{ .Title }}</a>
-                {{ if .Params.download_file }}
-                <span class="download-icon" title="يحتوي على ملف للتحميل">
-                    <i class="fas fa-download"></i>
-                </span>
-                {{ end }}
-            </h2>
-            <p>{{ .Summary }}</p>
-            <p>{{ .Date.Format "January 2, 2006" }}</p>
-        </article>
-    {{ end }}
-{{ end }}
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قناة TechTouch - اضغط على أي قسم للانتقال إليه مباشرة</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="profile-section">
+                <a href="https://t.me/techtouch7" target="_blank" class="profile-link">
+                    <img src="profile_pic.png" alt="techtouch" class="profile-pic">
+                    <span class="profile-name">techtouch</span>
+                </a>
+            </div>
+            <p class="subtitle">اضغط على أي قسم للانتقال إليه مباشرة</p>
+        </header>
 
+        <main class="main-content">
+            <!-- البطاقات المميزة في المقدمة -->
+            <section class="featured-section">
+                <div class="featured-cards-grid">
+                    <div class="featured-card" onclick="window.open('https://t.me/techtouch0/4882', '_blank')">
+                        <div class="featured-card-icon">
+                            <img src="telegram_bg.png" alt="ألعاب">
+                        </div>
+                        <div class="featured-card-content">
+                            <h3>قناة الألعاب</h3>
+                        </div>
+                    </div>
+
+                    <div class="featured-card" onclick="window.open('https://t.me/addlist/Gxcy1FFJONhkMjFi', '_blank')">
+                        <div class="featured-card-icon">
+                            <img src="telegram_bg.png" alt="جميع القنوات">
+                        </div>
+                        <div class="featured-card-content">
+                            <h3>جميع قنواتي</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- الأقسام الرئيسية -->
+            <section class="main-sections">
+                <div class="cards-grid">
+                    <div class="card" style="background: #e0f7fa;" onclick="window.open('https://t.me/techtouch5', '_blank')">
+                        <div class="card-icon">
+                            <img src="telegram_bg.png" alt="4K">
+                        </div>
+                        <div class="card-content">
+                            <h3>قناة الصور</h3>
+                        </div>
+                    </div>
+
+                    <div class="card" style="background: #e8f5e9;" onclick="window.open('https://t.me/techtouch7/161', '_blank')">
+                        <div class="card-icon">
+                            <img src="telegram_bg.png" alt="حذف حساب">
+                        </div>
+                        <div class="card-content">
+                            <h3>حذف حساب التلي</h3>
+                        </div>
+                    </div>
+
+                    <div class="card" onclick="window.open('https://t.me/techtouch7/124', '_blank')">
+                        <div class="card-icon">
+                            <img src="telegram_bg.png" alt="رياضة">
+                        </div>
+                        <div class="card-content">
+                            <h3>قسم التطبيقات الرياضية</h3>
+                        </div>
+                    </div>
+
+                    <div class="card" onclick="window.open('https://t.me/techtouch7/163', '_blank')">
+                        <div class="card-icon">
+                            <img src="telegram_bg.png" alt="أفلام">
+                        </div>
+                        <div class="card-content">
+                            <h3>قسم الأفـــلام</h3>
+                        </div>
+                    </div>
+
+                    <div class="card" onclick="window.open('https://t.me/techtouch7/237', '_blank')">
+                        <div class="card-icon">
+                            <img src="telegram_bg.png" alt="يوتيوب">
+                        </div>
+                        <div class="card-content">
+                            <h3>قسم تطبيقات اليوتيوب</h3>
+                        </div>
+                    </div>
+
+                    <div class="card" onclick="window.open('https://t.me/techtouch7/47', '_blank')">
+                        <div class="card-icon">
+                            <img src="telegram_bg.png" alt="تطبيقات">
+                        </div>
+                        <div class="card-content">
+                            <h3>قسم التطبيقــات</h3>
+                        </div>
+                    </div>
+
+                    <div class="card" onclick="window.open('https://t.me/techtouch7/671', '_blank')">
+                        <div class="card-icon">
+                            <img src="telegram_bg.png" alt="شروحات">
+                        </div>
+                        <div class="card-content">
+                            <h3>شروحات توضيح</h3>
+                        </div>
+                    </div>
+
+                    <div class="card" onclick="window.open('https://t.me/techtouch7/95', '_blank')">
+                        <div class="card-icon">
+                            <img src="telegram_bg.png" alt="ذكاء اصطناعي">
+                        </div>
+                        <div class="card-content">
+                            <h3>قسم الذكاء الاصطناعي</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- تطبيقات أفلام مميزة -->
+            <div class="sub-sections-grid">
+                <section class="sub-section">
+                    <div class="dropdown-card movies-card">
+                        <div class="dropdown-header">
+                            تطبيقات افـلام
+                        </div>
+                        <div id="movies-dropdown" class="dropdown-content">
+                            <div class="dropdown-item" onclick="window.open('https://t.me/techtouch7/173', '_blank')">
+                                <span class="dropdown-item-icon">🎬</span>
+                                <span class="dropdown-item-text">تـ Cinemana X ايرثلنك</span>
+                            </div>
+                            <div class="dropdown-item" onclick="window.open('https://t.me/techtouch7/174', '_blank')">
+                                <span class="dropdown-item-icon">🎭</span>
+                                <span class="dropdown-item-text">تـ CEE أفلام</span>
+                            </div>
+                            <div class="dropdown-item" onclick="window.open('https://t.me/techtouch7/2070', '_blank')">
+                                <span class="dropdown-item-icon">📽️</span>
+                                <span class="dropdown-item-text">تـ Monveibox أفلام</span>
+                            </div>
+                            <div class="dropdown-item" onclick="window.open('https://t.me/techtouch7/1668', '_blank')">
+                                <span class="dropdown-item-icon">🎪</span>
+                                <span class="dropdown-item-text">سينمانا</span>
+                            </div>
+                            <div class="dropdown-item" onclick="window.open('https://t.me/techtouch7/2676', '_blank')">
+                                <span class="dropdown-item-icon">🍿</span>
+                                <span class="dropdown-item-text">نتفلكس محاني</span>
+                            </div>
+                            <div class="dropdown-item" onclick="window.open('https://t.me/techtouch7/211?single', '_blank')">
+                                <span class="dropdown-item-icon">📺</span>
+                                <span class="dropdown-item-text">سيمو دراما</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- تطبيقات قنوات رياضية -->
+                <section class="sub-section">
+                    <div class="dropdown-card sports-card">
+                        <div class="dropdown-header">
+                            تطبيقات رياضيه
+                        </div>
+                        <div id="sports-dropdown" class="dropdown-content">
+                            <div class="dropdown-item" onclick="window.open('https://t.me/techtouch7/1450', '_blank')">
+                                <span class="dropdown-item-icon">📺</span>
+                                <span class="dropdown-item-text">MixFlix tv</span>
+                            </div>
+                            <div class="dropdown-item" onclick="window.open('https://t.me/techtouch7/1686', '_blank')">
+                                <span class="dropdown-item-icon">📺</span>
+                                <span class="dropdown-item-text">دراما لايف tv</span>
+                            </div>
+                            <div class="dropdown-item" onclick="window.open('https://t.me/techtouch7/2367?single', '_blank')">
+                                <span class="dropdown-item-icon">⚽</span>
+                                <span class="dropdown-item-text">الأسطورة tv</span>
+                            </div>
+                            <div class="dropdown-item" onclick="window.open('https://t.me/techtouch7/136', '_blank')">
+                                <span class="dropdown-item-icon">🏀</span>
+                                <span class="dropdown-item-text">ياسين tv</span>
+                            </div>
+                            <div class="dropdown-item" onclick="window.open('https://t.me/techtouch7/2719', '_blank')">
+                                <span class="dropdown-item-icon">🏈</span>
+                                <span class="dropdown-item-text">تـ BlackUltra</span>
+                            </div>
+                            <div class="dropdown-item" onclick="window.open('https://t.me/techtouch7/1992', '_blank')">
+                                <span class="dropdown-item-icon">🎾</span>
+                                <span class="dropdown-item-text">تـ ZAIN LIVE</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- قسم تصميم الفيديو -->
+                <section class="sub-section">
+                    <div class="dropdown-card video-design-card">
+                        <div class="dropdown-header">
+                            تصميم الفيديو
+                        </div>
+                        <div id="video-dropdown" class="dropdown-content">
+                            <div class="dropdown-item" onclick="window.open('https://t.me/techtouch7/2975?single', '_blank')">
+                                <span class="dropdown-item-icon">✂️</span>
+                                <span class="dropdown-item-text">تـ Viva cut بديل كاب كات</span>
+                            </div>
+                            <div class="dropdown-item" onclick="window.open('https://t.me/techtouch7/3250', '_blank')">
+                                <span class="dropdown-item-icon">🎨</span>
+                                <span class="dropdown-item-text">CapCut اصدار 2</span>
+                            </div>
+                            <div class="dropdown-item" onclick="window.open('https://t.me/techtouch7/3287', '_blank')">
+                                <span class="dropdown-item-icon">🎬</span>
+                                <span class="dropdown-item-text">CapCut اصدار 1</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- قسم المتفرقات -->
+                <section class="sub-section">
+                    <div class="dropdown-card misc-card">
+                        <div class="dropdown-header">
+                            قسم المتفرقـات
+                        </div>
+                        <div id="misc-dropdown" class="dropdown-content">
+                            <div class="dropdown-item" onclick="window.open('https://t.me/techtouch7/204', '_blank')">
+                                <span class="dropdown-item-icon">📱</span>
+                                <span class="dropdown-item-text">تـ MYTV الأندرويد</span>
+                            </div>
+                            <div class="dropdown-item" onclick="window.open('https://t.me/techtouch7/1041', '_blank')">
+                                <span class="dropdown-item-icon">📲</span>
+                                <span class="dropdown-item-text">تـ MYTV الآيفـــون</span>
+                            </div>
+                            <div class="dropdown-item" onclick="window.open('https://t.me/techtouch7/1556', '_blank')">
+                                <span class="dropdown-item-icon">📺</span>
+                                <span class="dropdown-item-text">شبكتي tv للشاشات</span>
+                            </div>
+                            <div class="dropdown-item" onclick="window.open('https://t.me/techtouch7/1818', '_blank')">
+                                <span class="dropdown-item-icon">📱</span>
+                                <span class="dropdown-item-text">شبكتي tv للهاتف</span>
+                            </div>
+                            <div class="dropdown-item" onclick="window.open('https://t.me/techtouch7/1639', '_blank')">
+                                <span class="dropdown-item-icon">🖥️</span>
+                                <span class="dropdown-item-text">المنصة X للشاشات</span>
+                            </div>
+                            <div class="dropdown-item" onclick="window.open('https://t.me/techtouch7/1533', '_blank')">
+                                <span class="dropdown-item-icon">📲</span>
+                                <span class="dropdown-item-text">المنصة X للهاتف</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p class="channel-info">
+                    <a href="https://t.me/techtouch7" target="_blank">
+                        <i class="fab fa-telegram"></i> قناة techtouch
+                    </a>
+                </p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/kinan.mjeed.88" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/techtouch0" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://youtube.com/@kinanmajeed" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.tiktok.com/@techtouch6" target="_blank"><i class="fab fa-tiktok"></i></a>
+                </div>
+                <p class="copyright">جميع الحقوق محفوظة © 2025</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Pop-up Modal Structure -->
+    <div id="popupModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <div id="modalContent" class="modal-grid"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
 
