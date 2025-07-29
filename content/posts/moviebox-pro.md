@@ -6,9 +6,11 @@ category: movies
 description: تطبيقات افـلام
 link: "1"
 ---
-
-
 ![](/images/uploads/1000109981.png)
+
+```
+https://t.me/techtouch7/2070
+```
 
 ```
 ❍ مفتوح بالكامل بدون اشتراك
