@@ -1,5 +1,5 @@
 ---
-title: MovieBox Pro move
+title: MovieBox Pro mo
 date: 2025-07-29T13:11:27.452Z
 draft: false
 category: movies
