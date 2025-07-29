@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>قناة TechTouch - اضغط على أي قسم للانتقال إليه مباشرة</title>
-    <link rel="stylesheet" href="style_enhanced.css">
+<link rel="stylesheet" href="{{ "style.css" | relURL }}">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -13,7 +13,7 @@
         <header class="header">
             <div class="profile-section">
                 <a href="https://t.me/techtouch7" target="_blank" class="profile-link">
-                    <img src="profile_pic.png" alt="techtouch" class="profile-pic">
+                    <img src="{{ "profile_pic.png" | relURL }}" alt="techtouch" class="profile-pic">
                     <span class="profile-name">techtouch</span>
                 </a>
             </div>
@@ -24,18 +24,18 @@
             <!-- البطاقات المميزة في المقدمة -->
             <section class="featured-section">
                 <div class="featured-cards-grid">
-                    <div class="featured-card" onclick="window.open('https://t.me/techtouch0/4882', '_blank')">
+                    <div class="featured-card" onclick="window.open(\'https://t.me/techtouch0/4882\', \'_blank\')">
                         <div class="featured-card-icon">
-                            <img src="new_misc_icon_1.png" alt="ألعاب">
+                            <img src="{{ "new_misc_icon_1.png" | relURL }}" alt="ألعاب">
                         </div>
                         <div class="featured-card-content">
                             <h3>قناة الألعاب</h3>
                         </div>
                     </div>
 
-                    <div class="featured-card" onclick="window.open('https://t.me/addlist/Gxcy1FFJONhkMjFi', '_blank')">
+                    <div class="featured-card" onclick="window.open(\'https://t.me/addlist/Gxcy1FFJONhkMjFi\', \'_blank\')">
                         <div class="featured-card-icon">
-                            <img src="new_misc_icon_2.png" alt="جميع القنوات">
+                            <img src="{{ "new_misc_icon_2.png" | relURL }}" alt="جميع القنوات">
                         </div>
                         <div class="featured-card-content">
                             <h3>جميع قنواتي</h3>
@@ -47,72 +47,72 @@
             <!-- الأقسام الرئيسية -->
             <section class="main-sections">
                 <div class="cards-grid">
-                    <div class="card card-photos" onclick="window.open('https://t.me/techtouch5', '_blank')">
+                    <div class="card card-photos" onclick="window.open(\'https://t.me/techtouch5\', \'_blank\')">
                         <div class="card-icon">
-                            <img src="new_misc_icon_3.png" alt="4K">
+                            <img src="{{ "new_misc_icon_3.png" | relURL }}" alt="4K">
                         </div>
                         <div class="card-content">
                             <h3>قناة الصور</h3>
                         </div>
                     </div>
 
-                    <div class="card card-delete" onclick="window.open('https://t.me/techtouch7/161', '_blank')">
+                    <div class="card card-delete" onclick="window.open(\'https://t.me/techtouch7/161\', \'_blank\')">
                         <div class="card-icon">
-                            <img src="delete_icon.png" alt="حذف حساب">
+                            <img src="{{ "delete_icon.png" | relURL }}" alt="حذف حساب">
                         </div>
                         <div class="card-content">
                             <h3>حذف حساب التلي</h3>
                         </div>
                     </div>
 
-                    <div class="card card-sports" onclick="window.open('https://t.me/techtouch7/124', '_blank')">
+                    <div class="card card-sports" onclick="window.open(\'https://t.me/techtouch7/124\', \'_blank\')">
                         <div class="card-icon">
-                            <img src="new_sports_icon_1.png" alt="رياضة">
+                            <img src="{{ "new_sports_icon_1.png" | relURL }}" alt="رياضة">
                         </div>
                         <div class="card-content">
                             <h3>قسم التطبيقات الرياضية</h3>
                         </div>
                     </div>
 
-                    <div class="card card-movies" onclick="window.open('https://t.me/techtouch7/163', '_blank')">
+                    <div class="card card-movies" onclick="window.open(\'https://t.me/techtouch7/163\', \'_blank\')">
                         <div class="card-icon">
-                            <img src="new_movie_icon_1.png" alt="أفلام">
+                            <img src="{{ "new_movie_icon_1.png" | relURL }}" alt="أفلام">
                         </div>
                         <div class="card-content">
                             <h3>قسم الأفلام</h3>
                         </div>
                     </div>
 
-                    <div class="card card-youtube" onclick="window.open('https://t.me/techtouch7/237', '_blank')">
+                    <div class="card card-youtube" onclick="window.open(\'https://t.me/techtouch7/237\', \'_blank\')">
                         <div class="card-icon">
-                            <img src="youtube_icon.png" alt="يوتيوب">
+                            <img src="{{ "youtube_icon.png" | relURL }}" alt="يوتيوب">
                         </div>
                         <div class="card-content">
                             <h3>قسم تطبيقات اليوتيوب</h3>
                         </div>
                     </div>
 
-                    <div class="card card-apps" onclick="window.open('https://t.me/techtouch7/47', '_blank')">
+                    <div class="card card-apps" onclick="window.open(\'https://t.me/techtouch7/47\', \'_blank\')">
                         <div class="card-icon">
-                            <img src="apps_icon.png" alt="تطبيقات">
+                            <img src="{{ "apps_icon.png" | relURL }}" alt="تطبيقات">
                         </div>
                         <div class="card-content">
                             <h3>قسم التطبيقات</h3>
                         </div>
                     </div>
 
-                    <div class="card card-tutorials" onclick="window.open('https://t.me/techtouch7/671', '_blank')">
+                    <div class="card card-tutorials" onclick="window.open(\'https://t.me/techtouch7/671\', \'_blank\')">
                         <div class="card-icon">
-                            <img src="tutorial_icon.png" alt="شروحات">
+                            <img src="{{ "tutorial_icon.png" | relURL }}" alt="شروحات">
                         </div>
                         <div class="card-content">
                             <h3>شروحات توضيح</h3>
                         </div>
                     </div>
 
-                    <div class="card card-ai" onclick="window.open('https://t.me/techtouch7/95', '_blank')">
+                    <div class="card card-ai" onclick="window.open(\'https://t.me/techtouch7/95\', \'_blank\')">
                         <div class="card-icon">
-                            <img src="ai_icon.png" alt="ذكاء اصطناعي">
+                            <img src="{{ "ai_icon.png" | relURL }}" alt="ذكاء اصطناعي">
                         </div>
                         <div class="card-content">
                             <h3>قسم الذكاء الاصطناعي</h3>
@@ -123,31 +123,49 @@
 
             <!-- البطاقات الصغيرة -->
             <div class="sub-sections-grid">
-                <div class="dropdown-card movies-card" onclick="openDropdownModal('movies-dropdown', 'تطبيقات افلام')">
+                <div class="dropdown-card movies-card" onclick="openDropdownModal(\'movies-dropdown\', \'تطبيقات افلام\')">
                     <div class="dropdown-header">
                         تطبيقات افلام
                     </div>
                 </div>
 
-                <div class="dropdown-card sports-card" onclick="openDropdownModal('sports-dropdown', 'تطبيقات رياضيه')">
+                <div class="dropdown-card sports-card" onclick="openDropdownModal(\'sports-dropdown\', \'تطبيقات رياضيه\')">
                     <div class="dropdown-header">
                         تطبيقات رياضيه
                     </div>
                 </div>
 
-                <div class="dropdown-card video-design-card" onclick="openDropdownModal('video-dropdown', 'تصميم الفيديو')">
+                <div class="dropdown-card video-design-card" onclick="openDropdownModal(\'video-dropdown\', \'تصميم الفيديو\')">
                     <div class="dropdown-header">
                         تصميم الفيديو
                     </div>
                 </div>
 
-                <div class="dropdown-card misc-card" onclick="openDropdownModal('misc-dropdown', 'قسم المتفرقات')">
+                <div class="dropdown-card misc-card" onclick="openDropdownModal(\'misc-dropdown\', \'قسم المتفرقات\')">
                     <div class="dropdown-header">
                         قسم المتفرقات
                     </div>
                 </div>
             </div>
         </main>
+
+        <section class="latest-posts-section">
+            <h1>آخر المنشورات</h1>
+            {{ range .Site.RegularPages }}
+                <article>
+                    <h2>
+                        <a href="{{ .Permalink }}">{{ .Title }}</a>
+                        {{ if .Params.download_file }}
+                        <span class="download-icon" title="يحتوي على ملف للتحميل">
+                            <i class="fas fa-download"></i>
+                        </span>
+                        {{ end }}
+                    </h2>
+                    <p>{{ .Summary }}</p>
+                    <p>{{ .Date.Format "January 2, 2006" }}</p>
+                </article>
+            {{ end }}
+        </section>
 
         <footer class="footer">
             <div class="footer-content">
@@ -158,16 +176,16 @@
                 </p>
                 <div class="social-links">
                     <a href="https://www.facebook.com/kinan.mjeed.88" target="_blank">
-                        <img src="facebook_official_icon.png" alt="Facebook">
+                        <img src="{{ "facebook_official_icon.png" | relURL }}" alt="Facebook">
                     </a>
                     <a href="https://www.instagram.com/techtouch0" target="_blank">
-                        <img src="instagram_official_icon.png" alt="Instagram">
+                        <img src="{{ "instagram_official_icon.png" | relURL }}" alt="Instagram">
                     </a>
                     <a href="https://youtube.com/@kinanmajeed" target="_blank">
-                        <img src="youtube_official_icon.png" alt="YouTube">
+                        <img src="{{ "youtube_official_icon.png" | relURL }}" alt="YouTube">
                     </a>
                     <a href="https://www.tiktok.com/@techtouch6" target="_blank">
-                        <img src="tiktok_official_icon.png" alt="TikTok">
+                        <img src="{{ "tiktok_official_icon.png" | relURL }}" alt="TikTok">
                     </a>
                 </div>
                 <p class="copyright">جميع الحقوق محفوظة © 2025</p>
@@ -184,7 +202,7 @@
         </div>
     </div>
 
-    <script src="script_ultimate_fix.js"></script>
+    <script src="{{ "script.js" | relURL }}"></script>
 </body>
 </html>
 
