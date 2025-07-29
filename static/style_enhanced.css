@@ -711,3 +711,98 @@ body {
     }
 }
 
+
+
+/* Recent Posts Section */
+.recent-posts {
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+.recent-posts h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+}
+
+.post-card {
+    background: rgba(236, 240, 241, 0.95);
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.post-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.post-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.post-card h3 a {
+    color: #0088cc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.post-card h3 a:hover {
+    color: #005f8c;
+}
+
+.post-date {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.post-summary {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+.download-icon {
+    color: #28a745;
+    margin-left: 8px;
+    font-size: 1rem;
+}
+
+/* Responsive Design for Recent Posts */
+@media (max-width: 768px) {
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .post-card {
+        padding: 12px;
+    }
+    
+    .post-card h3 {
+        font-size: 1.1rem;
+    }
+    
+    .post-summary {
+        font-size: 0.9rem;
+    }
+}
+
