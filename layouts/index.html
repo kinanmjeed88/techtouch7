@@ -1,145 +1,19 @@
 {{ define "main" }}
-<!-- البطاقات المميزة في المقدمة -->
-<section class="featured-section">
-    <div class="featured-cards-grid">
-        <div class="featured-card" onclick="window.open('https://t.me/techtouch0/4882', '_blank')">
-            <div class="featured-card-icon">
-                <img src="{{ "new_misc_icon_1.png" | relURL }}" alt="ألعاب">
-            </div>
-            <div class="featured-card-content">
-                <h3>قناة الألعاب</h3>
-            </div>
-        </div>
-
-        <div class="featured-card" onclick="window.open('https://t.me/addlist/Gxcy1FFJONhkMjFi', '_blank')">
-            <div class="featured-card-icon">
-                <img src="{{ "new_misc_icon_2.png" | relURL }}" alt="جميع القنوات">
-            </div>
-            <div class="featured-card-content">
-                <h3>جميع قنواتي</h3>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- الأقسام الرئيسية -->
-<section class="main-sections">
-    <div class="cards-grid">
-        <div class="card card-photos" onclick="window.open('https://t.me/techtouch5', '_blank')">
-            <div class="card-icon">
-                <img src="{{ "new_misc_icon_3.png" | relURL }}" alt="4K">
-            </div>
-            <div class="card-content">
-                <h3>قناة الصور</h3>
-            </div>
-        </div>
-
-        <div class="card card-delete" onclick="window.open('https://t.me/techtouch7/161', '_blank')">
-            <div class="card-icon">
-                <img src="{{ "delete_icon.png" | relURL }}" alt="حذف حساب">
-            </div>
-            <div class="card-content">
-                <h3>حذف حساب التلي</h3>
-            </div>
-        </div>
-
-        <div class="card card-sports" onclick="window.open('https://t.me/techtouch7/124', '_blank')">
-            <div class="card-icon">
-                <img src="{{ "new_sports_icon_1.png" | relURL }}" alt="رياضة">
-            </div>
-            <div class="card-content">
-                <h3>قسم التطبيقات الرياضية</h3>
-            </div>
-        </div>
-
-        <div class="card card-movies" onclick="window.open('https://t.me/techtouch7/163', '_blank')">
-            <div class="card-icon">
-                <img src="{{ "new_movie_icon_1.png" | relURL }}" alt="أفلام">
-            </div>
-            <div class="card-content">
-                <h3>قسم الأفلام</h3>
-            </div>
-        </div>
-
-        <div class="card card-youtube" onclick="window.open('https://t.me/techtouch7/237', '_blank')">
-            <div class="card-icon">
-                <img src="{{ "youtube_icon.png" | relURL }}" alt="يوتيوب">
-            </div>
-            <div class="card-content">
-                <h3>قسم تطبيقات اليوتيوب</h3>
-            </div>
-        </div>
-
-        <div class="card card-apps" onclick="window.open('https://t.me/techtouch7/47', '_blank')">
-            <div class="card-icon">
-                <img src="{{ "apps_icon.png" | relURL }}" alt="تطبيقات">
-            </div>
-            <div class="card-content">
-                <h3>قسم التطبيقات</h3>
-            </div>
-        </div>
-
-        <div class="card card-tutorials" onclick="window.open('https://t.me/techtouch7/671', '_blank')">
-            <div class="card-icon">
-                <img src="{{ "tutorial_icon.png" | relURL }}" alt="شروحات">
-            </div>
-            <div class="card-content">
-                <h3>شروحات توضيح</h3>
-            </div>
-        </div>
-
-        <div class="card card-ai" onclick="window.open('https://t.me/techtouch7/95', '_blank')">
-            <div class="card-icon">
-                <img src="{{ "ai_icon.png" | relURL }}" alt="ذكاء اصطناعي">
-            </div>
-            <div class="card-content">
-                <h3>قسم الذكاء الاصطناعي</h3>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- البطاقات الصغيرة -->
-<div class="sub-sections-grid">
-    <div class="dropdown-card movies-card" onclick="openDropdownModal('movies-dropdown', 'تطبيقات افلام')">
-        <div class="dropdown-header">
-            تطبيقات افلام
-        </div>
-    </div>
-
-    <div class="dropdown-card sports-card" onclick="openDropdownModal('sports-dropdown', 'تطبيقات رياضيه')">
-        <div class="dropdown-header">
-            تطبيقات رياضيه
-        </div>
-    </div>
-
-    <div class="dropdown-card video-design-card" onclick="openDropdownModal('video-dropdown', 'تصميم الفيديو')">
-        <div class="dropdown-header">
-            تصميم الفيديو
-        </div>
-    </div>
-
-    <div class="dropdown-card misc-card" onclick="openDropdownModal('misc-dropdown', 'قسم المتفرقات')">
-        <div class="dropdown-header">
-            قسم المتفرقات
-        </div>
-    </div>
-</div>
-
-<!-- قسم المنشورات الحديثة -->
-{{ if .Site.RegularPages }}
-<section class="recent-posts">
-    <h2>آخر المنشورات</h2>
-    <div class="posts-grid">
-        {{ range first 6 .Site.RegularPages }}
-        <article class="post-card">
-            <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-            <p class="post-date">{{ .Date.Format "2006-01-02" }}</p>
-            <p class="post-summary">{{ .Summary }}</p>
+    <h1>آخر المنشورات</h1>
+    {{ range .Site.RegularPages }}
+        <article>
+            <h2>
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+                {{ if .Params.download_file }}
+                <span class="download-icon" title="يحتوي على ملف للتحميل">
+                    <i class="fas fa-download"></i>
+                </span>
+                {{ end }}
+            </h2>
+            <p>{{ .Summary }}</p>
+            <p>{{ .Date.Format "January 2, 2006" }}</p>
         </article>
-        {{ end }}
-    </div>
-</section>
+    {{ end }}
 {{ end }}
-{{ end }}
+
 
