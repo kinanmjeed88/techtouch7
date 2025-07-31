@@ -1,0 +1,24 @@
+backend:
+  name: git-gateway
+  auth:
+    provider: auth0
+    client_id: 7R63Su5lCVygV9dJiWPLDG0fCmMu0NWF
+    domain: dev-nd1cktzyoebormj8.us.auth0.com
+
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "posts"
+    label: "المنشورات"
+    folder: "content/posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "العنوان", name: "title", widget: "string"}
+      - {label: "التاريخ", name: "date", widget: "datetime"}
+      - {label: "الفئة", name: "category", widget: "select", options: ["أفلام", "رياضة", "تصميم الفيديو", "متنوع"]}
+      - {label: "رابط التحميل", name: "download_link", widget: "string"}
+      - {label: "الملخص", name: "summary", widget: "text"}
+      - {label: "المحتوى", name: "body", widget: "markdown"}
+

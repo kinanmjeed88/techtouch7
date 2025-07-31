@@ -1,0 +1,16 @@
+{{ $paginator := .Paginate (where .Site.RegularPages "Type" "post") 10 }}
+{{ if gt $paginator.TotalPages 1 }}
+<nav class="pagination">
+  <a href="/" class="pagination-item pagination-home button">الصفحة الرئيسية</a>
+  {{ if $paginator.HasPrev }}
+  <a href="{{ $paginator.Prev.URL }}" class="pagination-item pagination-prev button">&#x2190; السابق</a>
+  {{ end }}
+  {{ range $paginator.Pagers }}
+  <a href="{{ .URL }}" class="pagination-item {{ if eq . $paginator }}is-active{{ end }} button">{{ .PageNumber }}</a>
+  {{ end }}
+  {{ if $paginator.HasNext }}
+  <a href="{{ $paginator.Next.URL }}" class="pagination-item pagination-next button">التالي &#x2192;</a>
+  {{ end }}
+</nav>
+{{ end }}
+
