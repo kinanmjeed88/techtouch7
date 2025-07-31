@@ -1,152 +1,200 @@
 {{ define "main" }}
-<!-- البطاقات المميزة في المقدمة -->
-<section class="featured-section">
-    <div class="featured-cards-grid">
-        <div class="featured-card" onclick="window.open('https://t.me/techtouch0/4882', '_blank')">
-            <div class="featured-card-icon">
-                <img src="{{ "new_misc_icon_1.png" | relURL }}" alt="ألعاب">
+<div class="container">
+    <h1>{{ .Site.Title }}</h1>
+    {{ .Content }}
+    
+    <!-- بطاقة رفيعة لعرض جميع المنشورات مع ترقيم الصفحات -->
+    {{ $paginator := .Paginate (where .Site.RegularPages "Type" "posts") 10 }}
+    <div class="all-posts-card">
+        <h2>جميع المنشورات</h2>
+        <div class="posts-grid">
+            {{ range $paginator.Pages }}
+            <div class="post-card-thin">
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+                <span class="post-date">{{ .Date.Format "2006-01-02" }}</span>
             </div>
-            <div class="featured-card-content">
-                <h3>قناة الألعاب</h3>
-            </div>
+            {{ end }}
         </div>
-
-        <div class="featured-card" onclick="window.open('https://t.me/addlist/Gxcy1FFJONhkMjFi', '_blank')">
-            <div class="featured-card-icon">
-                <img src="{{ "new_misc_icon_2.png" | relURL }}" alt="جميع القنوات">
-            </div>
-            <div class="featured-card-content">
-                <h3>جميع قنواتي</h3>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- الأقسام الرئيسية -->
-<section class="main-sections">
-    <div class="cards-grid">
-        <div class="card card-photos" onclick="window.open('https://t.me/techtouch5', '_blank')">
-            <div class="card-icon">
-                <img src="{{ "new_misc_icon_3.png" | relURL }}" alt="4K">
-            </div>
-            <div class="card-content">
-                <h3>قناة الصور</h3>
-            </div>
-        </div>
-
-        <div class="card card-delete" onclick="window.open('https://t.me/techtouch7/161', '_blank')">
-            <div class="card-icon">
-                <img src="{{ "delete_icon.png" | relURL }}" alt="حذف حساب">
-            </div>
-            <div class="card-content">
-                <h3>حذف حساب التلي</h3>
-            </div>
-        </div>
-
-        <div class="card card-sports" onclick="window.open('https://t.me/techtouch7/124', '_blank')">
-            <div class="card-icon">
-                <img src="{{ "new_sports_icon_1.png" | relURL }}" alt="رياضة">
-            </div>
-            <div class="card-content">
-                <h3>قسم التطبيقات الرياضية</h3>
-            </div>
-        </div>
-
-        <div class="card card-movies" onclick="window.open('https://t.me/techtouch7/163', '_blank')">
-            <div class="card-icon">
-                <img src="{{ "new_movie_icon_1.png" | relURL }}" alt="أفلام">
-            </div>
-            <div class="card-content">
-                <h3>قسم الأفلام</h3>
-            </div>
-        </div>
-
-        <div class="card card-youtube" onclick="window.open('https://t.me/techtouch7/237', '_blank')">
-            <div class="card-icon">
-                <img src="{{ "youtube_icon.png" | relURL }}" alt="يوتيوب">
-            </div>
-            <div class="card-content">
-                <h3>قسم تطبيقات اليوتيوب</h3>
-            </div>
-        </div>
-
-        <div class="card card-apps" onclick="window.open('https://t.me/techtouch7/47', '_blank')">
-            <div class="card-icon">
-                <img src="{{ "apps_icon.png" | relURL }}" alt="تطبيقات">
-            </div>
-            <div class="card-content">
-                <h3>قسم التطبيقات</h3>
-            </div>
-        </div>
-
-        <div class="card card-tutorials" onclick="window.open('https://t.me/techtouch7/671', '_blank')">
-            <div class="card-icon">
-                <img src="{{ "tutorial_icon.png" | relURL }}" alt="شروحات">
-            </div>
-            <div class="card-content">
-                <h3>شروحات توضيح</h3>
-            </div>
-        </div>
-
-        <div class="card card-ai" onclick="window.open('https://t.me/techtouch7/95', '_blank')">
-            <div class="card-icon">
-                <img src="{{ "ai_icon.png" | relURL }}" alt="ذكاء اصطناعي">
-            </div>
-            <div class="card-content">
-                <h3>قسم الذكاء الاصطناعي</h3>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- البطاقات الصغيرة -->
-<div class="sub-sections-grid">
-    <div class="dropdown-card movies-card" onclick="openDropdownModal('movies-dropdown', 'تطبيقات افلام')">
-        <div class="dropdown-header">
-            تطبيقات افلام
-        </div>
-    </div>
-
-    <div class="dropdown-card sports-card" onclick="openDropdownModal('sports-dropdown', 'تطبيقات رياضيه')">
-        <div class="dropdown-header">
-            تطبيقات رياضيه
-        </div>
-    </div>
-
-    <div class="dropdown-card video-design-card" onclick="openDropdownModal('video-dropdown', 'تصميم الفيديو')">
-        <div class="dropdown-header">
-            تصميم الفيديو
-        </div>
-    </div>
-
-    <div class="dropdown-card misc-card" onclick="openDropdownModal('misc-dropdown', 'قسم المتفرقات')">
-        <div class="dropdown-header">
-            قسم المتفرقات
-        </div>
+        
+        <!-- ترقيم الصفحات -->
+        {{ if gt $paginator.TotalPages 1 }}
+        <nav class="pagination">
+            <a href="/" class="pagination-item pagination-home">الصفحة الرئيسية</a>
+            {{ if $paginator.HasPrev }}
+            <a href="{{ $paginator.Prev.URL }}" class="pagination-item pagination-prev">&#x2190; السابق</a>
+            {{ end }}
+            {{ range $paginator.Pagers }}
+            <a href="{{ .URL }}" class="pagination-item {{ if eq . $paginator }}is-active{{ end }}">{{ .PageNumber }}</a>
+            {{ end }}
+            {{ if $paginator.HasNext }}
+            <a href="{{ $paginator.Next.URL }}" class="pagination-item pagination-next">التالي &#x2192;</a>
+            {{ end }}
+        </nav>
+        {{ end }}
     </div>
 </div>
 
-<!-- قسم المنشورات الحديثة -->
-{{ if .Site.RegularPages }}
-<section class="recent-posts">
-    <h2>آخر المنشورات</h2>
-    <div class="posts-grid">
-        {{ range first 6 .Site.RegularPages }}
-        <article class="post-card">
-            <h3>
-                <a href="{{ .Permalink }}">{{ .Title }}</a>
-                {{ if .Params.download_file }}
-                <span class="download-icon" title="يحتوي على ملف للتحميل">
-                    <i class="fas fa-download"></i>
-                </span>
-                {{ end }}
-            </h3>
-            <p class="post-date">{{ .Date.Format "2006-01-02" }}</p>
-            <p class="post-summary">{{ .Summary }}</p>
-        </article>
-        {{ end }}
-    </div>
-</section>
-{{ end }}
+<style>
+.all-posts-card {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 30px 0;
+}
+
+.all-posts-card h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.posts-grid {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.post-card-thin {
+    background: white;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 15px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.post-card-thin:hover {
+    background: #f1f3f4;
+    border-color: #007bff;
+    transform: translateY(-2px);
+}
+
+.post-card-thin a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 15px;
+}
+
+.post-card-thin a:hover {
+    color: #007bff;
+}
+
+.post-date {
+    color: #6c757d;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.pagination-item {
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    color: #007bff;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+.pagination-item:hover {
+    background: #007bff;
+    color: white;
+}
+
+.pagination-item.is-active {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.pagination-home {
+    background: #28a745;
+    color: white;
+    border-color: #28a745;
+}
+
+.pagination-home:hover {
+    background: #218838;
+    border-color: #1e7e34;
+}
+
+/* تصميم متجاوب للشاشات الصغيرة */
+@media (max-width: 768px) {
+    .posts-grid {
+        gap: 8px;
+    }
+    
+    .post-card-thin {
+        padding: 12px;
+        height: 80px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    
+    .post-card-thin a {
+        margin-right: 0;
+        margin-bottom: 5px;
+        font-size: 0.9rem;
+    }
+    
+    .post-date {
+        font-size: 0.8rem;
+    }
+    
+    .pagination {
+        gap: 5px;
+    }
+    
+    .pagination-item {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+}
+
+/* تصميم للشاشات الصغيرة جداً */
+@media (max-width: 480px) {
+    .all-posts-card {
+        padding: 15px;
+        margin: 20px 0;
+    }
+    
+    .all-posts-card h2 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+    
+    .post-card-thin {
+        padding: 10px;
+        height: 80px;
+    }
+    
+    .post-card-thin a {
+        font-size: 0.85rem;
+    }
+    
+    .post-date {
+        font-size: 0.75rem;
+    }
+}
+</style>
 {{ end }}
 

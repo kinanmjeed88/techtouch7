@@ -3,6 +3,10 @@ languageCode = "ar"
 title = "قناة TechTouch"
 defaultContentLanguage = "ar"
 
+# إعدادات ترقيم الصفحات
+paginate = 10
+paginatePath = "page"
+
 [params]
   description = "اضغط على أي قسم للانتقال إليه مباشرة"
   author = "TechTouch"
@@ -11,6 +15,10 @@ defaultContentLanguage = "ar"
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
+# إعدادات الروابط الدائمة
+[permalinks]
+  posts = "/posts/:slug/"
 
 [menu]
   [[menu.main]]
