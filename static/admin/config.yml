@@ -12,12 +12,12 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "العنوان", name: "title", widget: "string"}
-      - {label: "التاريخ", name: "date", widget: "datetime"}
+      - {label: "العنوان", name: "title", widget: "string", required: false}
+      - {label: "التاريخ", name: "date", widget: "datetime", required: false}
       - {label: "المسودة", name: "draft", widget: "boolean", default: false}
-      - {label: "الفئة", name: "category", widget: "select", options: ["movies", "sports", "video-design", "misc"]}
-      - {label: "الوصف", name: "description", widget: "text"}
-      - {label: "الرابط", name: "link", widget: "string"}
-      - {label: "المحتوى", name: "body", widget: "markdown"}
-      - {label: "ملف التحميل", name: "download_file", widget: "file", allow_multiple: false}
+      - {label: "الفئة", name: "category", widget: "select", options: ["movies", "sports", "video-design", "misc"], required: false}
+      - {label: "الوصف", name: "description", widget: "text", required: false}
+      - {label: "الرابط", name: "link", widget: "string", required: false}
+      - {label: "المحتوى", name: "body", widget: "markdown", required: false}
+      - {label: "ملف التحميل", name: "download_file", widget: "file", allow_multiple: false, required: false}
 
