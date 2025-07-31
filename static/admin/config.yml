@@ -13,7 +13,7 @@ collections:
     slug: "{{slug}}"
     identifier_field: "slug"
     fields:
-      - {label: "العنوان", name: "title", widget: "string", required: false}
+      - {label: "العنوان", name: "title", widget: "string", required: true}
       - {label: "التاريخ", name: "date", widget: "datetime", required: false}
       - {label: "المسودة", name: "draft", widget: "boolean", default: false}
       - {label: "الفئة", name: "category", widget: "select", options: ["movies", "sports", "video-design", "misc"], required: false}
