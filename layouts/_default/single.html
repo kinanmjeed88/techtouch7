@@ -56,14 +56,6 @@
     </div>
     {{ end }}
     
-    {{ if .Params.download_file }}
-    <div class="download-section">
-        <a href="{{ .Params.download_file }}" target="_blank" class="download-button">
-            <i class="fas fa-download"></i> تحميل الملف
-        </a>
-    </div>
-    {{ end }}
-    
     <footer class="post-footer">
         <div class="post-navigation">
             {{ if .PrevInSection }}
@@ -166,7 +158,10 @@
 </style>
 
 <script>
-// تحديث عداد المشاهدات عند تحميل الصفحة
+// نظام مشترك للعدادات باستخدام خدمة مجانية
+const STATS_API_URL = 'https://api.countapi.xyz';
+
+// تحديث عداد المشاهدات وزر الإعجاب عند تحميل الصفحة
 document.addEventListener('DOMContentLoaded', function() {
     const postId = '{{ .File.UniqueID }}';
     
@@ -178,64 +173,120 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function updateViewsCount(postId) {
-    const viewsKey = 'views_' + postId;
-    let views = parseInt(localStorage.getItem(viewsKey) || '0');
-    
-    // زيادة عدد المشاهدات
-    views++;
-    localStorage.setItem(viewsKey, views.toString());
-    
-    // تحديث العرض
-    const viewsElement = document.getElementById('views-count-' + postId);
-    if (viewsElement) {
-        viewsElement.textContent = views;
-    }
+    // استخدام CountAPI لزيادة عدد المشاهدات
+    fetch(`${STATS_API_URL}/hit/techtouch-views/${postId}`)
+        .then(response => response.json())
+        .then(data => {
+            const viewsElement = document.getElementById('views-count-' + postId);
+            if (viewsElement && data.value) {
+                viewsElement.textContent = data.value;
+            }
+        })
+        .catch(error => {
+            console.log('Error updating views:', error);
+            // استخدام نظام احتياطي محلي
+            const viewsKey = 'global_views_' + postId;
+            let views = parseInt(localStorage.getItem(viewsKey) || '0');
+            views++;
+            localStorage.setItem(viewsKey, views.toString());
+            
+            const viewsElement = document.getElementById('views-count-' + postId);
+            if (viewsElement) {
+                viewsElement.textContent = views;
+            }
+        });
 }
 
 function updateLikeButton(postId) {
-    const likesKey = 'likes_' + postId;
-    const likedKey = 'liked_' + postId;
-    
-    const likes = parseInt(localStorage.getItem(likesKey) || '0');
-    const isLiked = localStorage.getItem(likedKey) === 'true';
-    
-    const likesElement = document.getElementById('likes-count-' + postId);
-    const likeButton = document.getElementById('like-btn-' + postId);
-    
-    if (likesElement) {
-        likesElement.textContent = likes;
-    }
-    
-    if (likeButton) {
-        if (isLiked) {
-            likeButton.classList.add('liked');
-        } else {
-            likeButton.classList.remove('liked');
-        }
-    }
+    // الحصول على عدد الإعجابات الحالي
+    fetch(`${STATS_API_URL}/get/techtouch-likes/${postId}`)
+        .then(response => response.json())
+        .then(data => {
+            const likesElement = document.getElementById('likes-count-' + postId);
+            if (likesElement) {
+                likesElement.textContent = data.value || 0;
+            }
+            
+            // التحقق من حالة الإعجاب المحلية
+            const likedKey = 'liked_' + postId;
+            const isLiked = localStorage.getItem(likedKey) === 'true';
+            const likeButton = document.getElementById('like-btn-' + postId);
+            
+            if (likeButton) {
+                if (isLiked) {
+                    likeButton.classList.add('liked');
+                } else {
+                    likeButton.classList.remove('liked');
+                }
+            }
+        })
+        .catch(error => {
+            console.log('Error getting likes:', error);
+            // استخدام نظام احتياطي محلي
+            const likesKey = 'global_likes_' + postId;
+            const likedKey = 'liked_' + postId;
+            
+            const likes = parseInt(localStorage.getItem(likesKey) || '0');
+            const isLiked = localStorage.getItem(likedKey) === 'true';
+            
+            const likesElement = document.getElementById('likes-count-' + postId);
+            const likeButton = document.getElementById('like-btn-' + postId);
+            
+            if (likesElement) {
+                likesElement.textContent = likes;
+            }
+            
+            if (likeButton) {
+                if (isLiked) {
+                    likeButton.classList.add('liked');
+                } else {
+                    likeButton.classList.remove('liked');
+                }
+            }
+        });
 }
 
 function toggleLike(postId) {
-    const likesKey = 'likes_' + postId;
     const likedKey = 'liked_' + postId;
-    
-    let likes = parseInt(localStorage.getItem(likesKey) || '0');
     const isLiked = localStorage.getItem(likedKey) === 'true';
     
     if (isLiked) {
-        // إلغاء الإعجاب
-        likes = Math.max(0, likes - 1);
-        localStorage.setItem(likesKey, likes.toString());
-        localStorage.setItem(likedKey, 'false');
+        // إلغاء الإعجاب - تقليل العدد
+        fetch(`${STATS_API_URL}/hit/techtouch-likes/${postId}/-1`)
+            .then(response => response.json())
+            .then(data => {
+                localStorage.setItem(likedKey, 'false');
+                updateLikeButton(postId);
+            })
+            .catch(error => {
+                console.log('Error removing like:', error);
+                // استخدام نظام احتياطي محلي
+                const likesKey = 'global_likes_' + postId;
+                let likes = parseInt(localStorage.getItem(likesKey) || '0');
+                likes = Math.max(0, likes - 1);
+                localStorage.setItem(likesKey, likes.toString());
+                localStorage.setItem(likedKey, 'false');
+                updateLikeButton(postId);
+            });
     } else {
-        // إضافة إعجاب
-        likes++;
-        localStorage.setItem(likesKey, likes.toString());
-        localStorage.setItem(likedKey, 'true');
+        // إضافة إعجاب - زيادة العدد
+        fetch(`${STATS_API_URL}/hit/techtouch-likes/${postId}`)
+            .then(response => response.json())
+            .then(data => {
+                localStorage.setItem(likedKey, 'true');
+                updateLikeButton(postId);
+            })
+            .catch(error => {
+                console.log('Error adding like:', error);
+                // استخدام نظام احتياطي محلي
+                const likesKey = 'global_likes_' + postId;
+                let likes = parseInt(localStorage.getItem(likesKey) || '0');
+                likes++;
+                localStorage.setItem(likesKey, likes.toString());
+                localStorage.setItem(likedKey, 'true');
+                updateLikeButton(postId);
+            });
     }
-    
-    // تحديث العرض
-    updateLikeButton(postId);
 }
 </script>
 {{ end }}

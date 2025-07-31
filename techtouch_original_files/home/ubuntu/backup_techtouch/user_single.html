@@ -1,0 +1,68 @@
+{{ define "main" }}
+<article class="single-post">
+    <!-- زر العودة للصفحة الرئيسية -->
+    <div class="back-to-home">
+        <a href="{{ "/" | relURL }}" class="back-home-btn">
+            ← العودة للصفحة الرئيسية
+        </a>
+    </div>
+    
+    <header class="post-header">
+        <h1>{{ .Title }}</h1>
+        <div class="post-meta">
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+            {{ if .Params.category }}
+            <span class="post-category">{{ .Params.category }}</span>
+            {{ end }}
+        </div>
+    </header>
+    
+    <div class="post-content">
+        {{ .Content }}
+    </div>
+    
+    <!-- عرض الملف المرفق إذا كان موجوداً -->
+    {{ if .Params.file_upload }}
+    <div class="file-attachment-section">
+        <h3>الملف المرفق</h3>
+        <div class="file-attachment">
+            <a href="{{ .Params.file_upload | relURL }}" class="file-attachment-btn" download>
+                📎 تحميل الملف المرفق
+            </a>
+        </div>
+    </div>
+    {{ end }}
+    
+    {{ if .Params.download_link }}
+    <div class="download-section">
+        <a href="{{ .Params.download_link }}" target="_blank" class="download-button">
+            <i class="fas fa-download"></i> تحميل
+        </a>
+    </div>
+    {{ end }}
+    
+    <footer class="post-footer">
+        <div class="post-navigation">
+            {{ if .PrevInSection }}
+            <a href="{{ .PrevInSection.Permalink }}" class="prev-post">
+                <i class="fas fa-arrow-right"></i> المنشور السابق
+            </a>
+            {{ end }}
+            
+            {{ if .NextInSection }}
+            <a href="{{ .NextInSection.Permalink }}" class="next-post">
+                المنشور التالي <i class="fas fa-arrow-left"></i>
+            </a>
+            {{ end }}
+        </div>
+        
+        <!-- زر العودة للصفحة الرئيسية في الأسفل أيضاً -->
+        <div class="back-to-home-footer">
+            <a href="{{ "/" | relURL }}" class="back-home-btn-footer">
+                العودة للصفحة الرئيسية
+            </a>
+        </div>
+    </footer>
+</article>
+{{ end }}
+
