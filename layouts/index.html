@@ -163,254 +163,79 @@
 </section>
 {{ end }}
 
-<!-- بطاقة رفيعة لعرض جميع المنشورات مع ترقيم الصفحات -->
-{{ $paginator := .Paginate (where .Site.RegularPages "Type" "posts") 10 }}
-<div class="all-posts-card">
-    <h2>جميع المنشورات</h2>
-    <div class="posts-grid-thin">
-        {{ range $paginator.Pages }}
-        <div class="post-card-thin">
-            <div class="post-info">
-                <a href="{{ .Permalink }}">{{ .Title }}</a>
-                <span class="post-date">{{ .Date.Format "2006-01-02" }}</span>
-            </div>
-            <div class="post-stats-mini">
-                <span class="views-mini">
-                    <span class="views-icon">👁️</span>
-                    <span id="views-mini-thin-{{ .File.UniqueID }}">0</span>
-                </span>
-                <span class="likes-mini">
-                    <span class="like-icon">❤️</span>
-                    <span id="likes-mini-thin-{{ .File.UniqueID }}">0</span>
-                </span>
-            </div>
-        </div>
-        {{ end }}
+<!-- بطاقة 'جميع المنشورات' الجديدة -->
+<section class="all-posts-single-card-section">
+    <div class="all-posts-single-card" onclick="window.location.href = '/all-posts/';">
+        <h2>جميع المنشورات</h2>
+        <p>استعرض جميع المنشورات في مكان واحد</p>
     </div>
-    
-    <!-- ترقيم الصفحات -->
-    {{ if gt $paginator.TotalPages 1 }}
-    <nav class="pagination">
-        <a href="/" class="pagination-item pagination-home">الصفحة الرئيسية</a>
-        {{ if $paginator.HasPrev }}
-        <a href="{{ $paginator.Prev.URL }}" class="pagination-item pagination-prev">&#x2190; السابق</a>
-        {{ end }}
-        {{ range $paginator.Pagers }}
-        <a href="{{ .URL }}" class="pagination-item {{ if eq . $paginator }}is-active{{ end }}">{{ .PageNumber }}</a>
-        {{ end }}
-        {{ if $paginator.HasNext }}
-        <a href="{{ $paginator.Next.URL }}" class="pagination-item pagination-next">التالي &#x2192;</a>
-        {{ end }}
-    </nav>
-    {{ end }}
-</div>
+</section>
+
+<style>
+.all-posts-single-card-section {
+    margin: 30px 0;
+    padding: 0 15px;
+}
+
+.all-posts-single-card {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: white;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.all-posts-single-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.all-posts-single-card h2 {
+    margin-top: 0;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.all-posts-single-card p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .all-posts-single-card {
+        padding: 20px;
+    }
+    .all-posts-single-card h2 {
+        font-size: 1.8rem;
+    }
+    .all-posts-single-card p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .all-posts-single-card {
+        padding: 15px;
+        border-radius: 8px;
+    }
+    .all-posts-single-card h2 {
+        font-size: 1.5rem;
+    }
+    .all-posts-single-card p {
+        font-size: 0.9rem;
+    }
+}
+</style>
 
 <!-- زر العودة للأعلى -->
 <button id="backToTop" class="back-to-top" onclick="scrollToTop()">
     ↑
 </button>
-
-<style>
-/* إضافة تنسيقات البطاقة الرفيعة */
-.all-posts-card {
-    background: #f8f9fa;
-    border: 1px solid #e9ecef;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 30px 0;
-}
-
-.all-posts-card h2 {
-    margin-bottom: 20px;
-    color: #333;
-    font-size: 1.5rem;
-    text-align: center;
-}
-
-.posts-grid-thin {
-    display: grid;
-    gap: 10px;
-    margin-bottom: 30px;
-}
-
-.post-card-thin {
-    background: white;
-    border: 1px solid #dee2e6;
-    border-radius: 4px;
-    padding: 15px;
-    height: 80px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: all 0.3s ease;
-}
-
-.post-card-thin:hover {
-    background: #f1f3f4;
-    border-color: #007bff;
-    transform: translateY(-2px);
-}
-
-.post-info {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-right: 15px;
-}
-
-.post-info a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    margin-bottom: 5px;
-}
-
-.post-info a:hover {
-    color: #007bff;
-}
-
-.post-date {
-    color: #6c757d;
-    font-size: 0.8rem;
-    white-space: nowrap;
-}
-
-.post-stats-mini {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    align-items: flex-end;
-    min-width: 60px;
-}
-
-.views-mini, .likes-mini {
-    display: flex;
-    align-items: center;
-    gap: 3px;
-    font-size: 0.75rem;
-    color: #6c757d;
-}
-
-.views-mini .views-icon, .likes-mini .like-icon {
-    font-size: 0.8rem;
-}
-
-.pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin: 20px 0;
-    flex-wrap: wrap;
-}
-
-.pagination-item {
-    padding: 8px 16px;
-    text-decoration: none;
-    border: 1px solid #dee2e6;
-    border-radius: 4px;
-    color: #007bff;
-    background: white;
-    transition: all 0.3s ease;
-}
-
-.pagination-item:hover {
-    background: #007bff;
-    color: white;
-}
-
-.pagination-item.is-active {
-    background: #007bff;
-    color: white;
-    border-color: #007bff;
-}
-
-.pagination-home {
-    background: #28a745;
-    color: white;
-    border-color: #28a745;
-}
-
-.pagination-home:hover {
-    background: #218838;
-    border-color: #1e7e34;
-}
-
-/* تصميم متجاوب للشاشات الصغيرة */
-@media (max-width: 768px) {
-    .posts-grid-thin {
-        gap: 8px;
-    }
-    
-    .post-card-thin {
-        padding: 12px;
-        height: 80px;
-    }
-    
-    .post-info a {
-        font-size: 0.9rem;
-    }
-    
-    .post-date {
-        font-size: 0.75rem;
-    }
-    
-    .post-stats-mini {
-        min-width: 50px;
-    }
-    
-    .views-mini, .likes-mini {
-        font-size: 0.7rem;
-    }
-    
-    .pagination {
-        gap: 5px;
-    }
-    
-    .pagination-item {
-        padding: 6px 12px;
-        font-size: 0.9rem;
-    }
-}
-
-/* تصميم للشاشات الصغيرة جداً */
-@media (max-width: 480px) {
-    .all-posts-card {
-        padding: 15px;
-        margin: 20px 0;
-    }
-    
-    .all-posts-card h2 {
-        font-size: 1.3rem;
-        margin-bottom: 15px;
-    }
-    
-    .post-card-thin {
-        padding: 10px;
-        height: 80px;
-    }
-    
-    .post-info a {
-        font-size: 0.85rem;
-    }
-    
-    .post-date {
-        font-size: 0.7rem;
-    }
-    
-    .post-stats-mini {
-        min-width: 45px;
-    }
-    
-    .views-mini, .likes-mini {
-        font-size: 0.65rem;
-    }
-}
-</style>
 
 <script>
 // نظام مشترك للعدادات باستخدام JSONBin
@@ -426,16 +251,6 @@ document.addEventListener('DOMContentLoaded', function() {
         if (viewsElement) {
             const postId = viewsElement.id.replace('views-mini-', '');
             updateMiniStats(postId);
-        }
-    });
-    
-    // تحديث إحصائيات المنشورات في البطاقات الرفيعة
-    const thinCards = document.querySelectorAll('.post-card-thin');
-    thinCards.forEach(function(card) {
-        const viewsElement = card.querySelector('[id^="views-mini-thin-"]');
-        if (viewsElement) {
-            const postId = viewsElement.id.replace('views-mini-thin-', '');
-            updateThinStats(postId);
         }
     });
 });
@@ -462,37 +277,6 @@ function updateMiniStats(postId) {
     
     const viewsElement = document.getElementById('views-mini-' + postId);
     const likesElement = document.getElementById('likes-mini-' + postId);
-    
-    if (viewsElement) {
-        viewsElement.textContent = views;
-    }
-    
-    if (likesElement) {
-        likesElement.textContent = likes;
-    }
-}
-
-// تحديث الإحصائيات للمنشورات في البطاقات الرفيعة
-function updateThinStats(postId) {
-    const viewsKey = 'global_views_' + postId;
-    const likesKey = 'global_likes_' + postId;
-    
-    let views = parseInt(localStorage.getItem(viewsKey) || '0');
-    let likes = parseInt(localStorage.getItem(likesKey) || '0');
-    
-    // إضافة أرقام عشوائية للمحاكاة (سيتم استبدالها بالبيانات الحقيقية)
-    if (views === 0) {
-        views = Math.floor(Math.random() * 100) + 10;
-        localStorage.setItem(viewsKey, views.toString());
-    }
-    
-    if (likes === 0) {
-        likes = Math.floor(Math.random() * 20) + 1;
-        localStorage.setItem(likesKey, likes.toString());
-    }
-    
-    const viewsElement = document.getElementById('views-mini-thin-' + postId);
-    const likesElement = document.getElementById('likes-mini-thin-' + postId);
     
     if (viewsElement) {
         viewsElement.textContent = views;

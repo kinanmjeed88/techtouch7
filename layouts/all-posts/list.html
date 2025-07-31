@@ -1,13 +1,18 @@
 {{ define "main" }}
 <div class="container">
-    <h1>{{ .Title }}</h1>
-    {{ .Content }}
+    <h1>جميع المنشورات</h1>
     
+    <!-- زر العودة للصفحة الرئيسية -->
+    <div class="back-to-home-all-posts">
+        <a href="/" class="back-home-btn-all-posts">
+            ← العودة للصفحة الرئيسية
+        </a>
+    </div>
+
     <!-- بطاقة رفيعة لعرض جميع المنشورات مع ترقيم الصفحات -->
     {{ $paginator := .Paginate (where .Site.RegularPages "Type" "posts") 10 }}
     <div class="all-posts-card">
-        <h2>جميع المنشورات</h2>
-        <div class="posts-grid">
+        <div class="posts-grid-thin">
             {{ range $paginator.Pages }}
             <div class="post-card-thin">
                 <div class="post-info">
@@ -62,7 +67,7 @@
     text-align: center;
 }
 
-.posts-grid {
+.posts-grid-thin {
     display: grid;
     gap: 10px;
     margin-bottom: 30px;
@@ -175,9 +180,28 @@
     border-color: #1e7e34;
 }
 
+.back-to-home-all-posts {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.back-home-btn-all-posts {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.back-home-btn-all-posts:hover {
+    background-color: #0056b3;
+}
+
 /* تصميم متجاوب للشاشات الصغيرة */
 @media (max-width: 768px) {
-    .posts-grid {
+    .posts-grid-thin {
         gap: 8px;
     }
     
@@ -305,3 +329,5 @@ function updateThinStats(postId) {
 }
 </script>
 {{ end }}
+
+
