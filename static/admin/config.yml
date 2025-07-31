@@ -11,7 +11,7 @@ collections:
     folder: "content/posts"
     create: true
     slug: "{{slug}}"
-    identifier_field: "title"
+    identifier_field: "slug"
     fields:
       - {label: "العنوان", name: "title", widget: "string", required: false}
       - {label: "التاريخ", name: "date", widget: "datetime", required: false}
