@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جميع المنشورات - قناة TechTouch</title>
+    <link rel="stylesheet" href="/style_enhanced.css">
+    <link rel="stylesheet" href="/style_modern.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+    <div class="profile-section">
+        <a href="https://t.me/techtouch7" target="_blank" class="profile-link">
+            <img src="/profile_pic.png" alt="techtouch" class="profile-pic">
+            <span class="profile-name">techtouch</span>
+        </a>
+    </div>
+    <p class="subtitle">اضغط على أي قسم للانتقال إليه مباشرة</p>
+</header>
+
+
+        
+        <main class="main-content">
+            
+<div class="container">
+    <h1>جميع المنشورات</h1>
+    
+    
+    <div class="back-to-home-all-posts">
+        <a href="/" class="back-home-btn-all-posts">
+            ← العودة للصفحة الرئيسية
+        </a>
+    </div>
+
+    
+    <div class="all-posts-card">
+        <div class="posts-grid-thin">
+            
+        </div>
+        
+        
+
+
+
+    </div>
+</div>
+
+<style>
+.all-posts-card {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 30px 0;
+}
+
+.all-posts-card h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.posts-grid-thin {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.post-card-thin {
+    background: white;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 15px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.post-card-thin:hover {
+    background: #f1f3f4;
+    border-color: #007bff;
+    transform: translateY(-2px);
+}
+
+.post-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.post-info a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 5px;
+}
+
+.post-info a:hover {
+    color: #007bff;
+}
+
+.post-date {
+    color: #6c757d;
+    font-size: 0.8rem;
+    white-space: nowrap;
+}
+
+.post-stats-mini {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-end;
+    min-width: 60px;
+}
+
+.views-mini, .likes-mini {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 0.75rem;
+    color: #6c757d;
+}
+
+.views-mini .views-icon, .likes-mini .like-icon {
+    font-size: 0.8rem;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.pagination-item {
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    color: #007bff;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+.pagination-item:hover {
+    background: #007bff;
+    color: white;
+}
+
+.pagination-item.is-active {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.pagination-home {
+    background: #28a745;
+    color: white;
+    border-color: #28a745;
+}
+
+.pagination-home:hover {
+    background: #218838;
+    border-color: #1e7e34;
+}
+
+.back-to-home-all-posts {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.back-home-btn-all-posts {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.back-home-btn-all-posts:hover {
+    background-color: #0056b3;
+}
+
+ 
+@media (max-width: 768px) {
+    .posts-grid-thin {
+        gap: 8px;
+    }
+    
+    .post-card-thin {
+        padding: 12px;
+        height: 80px;
+    }
+    
+    .post-info a {
+        font-size: 0.9rem;
+    }
+    
+    .post-date {
+        font-size: 0.75rem;
+    }
+    
+    .post-stats-mini {
+        min-width: 50px;
+    }
+    
+    .views-mini, .likes-mini {
+        font-size: 0.7rem;
+    }
+    
+    .pagination {
+        gap: 5px;
+    }
+    
+    .pagination-item {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+}
+
+ 
+@media (max-width: 480px) {
+    .all-posts-card {
+        padding: 15px;
+        margin: 20px 0;
+    }
+    
+    .all-posts-card h2 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+    
+    .post-card-thin {
+        padding: 10px;
+        height: 80px;
+    }
+    
+    .post-info a {
+        font-size: 0.85rem;
+    }
+    
+    .post-date {
+        font-size: 0.7rem;
+    }
+    
+    .post-stats-mini {
+        min-width: 45px;
+    }
+    
+    .views-mini, .likes-mini {
+        font-size: 0.65rem;
+    }
+}
+</style>
+
+<script>
+
+const STATS_API_URL = 'https://api.countapi.xyz';
+
+document.addEventListener('DOMContentLoaded', function() {
+    const thinCards = document.querySelectorAll('.post-card-thin');
+    thinCards.forEach(function(card) {
+        const viewsElement = card.querySelector('[id^="views-mini-thin-"]');
+        if (viewsElement) {
+            const postId = viewsElement.id.replace('views-mini-thin-', '');
+            updateThinStats(postId);
+        }
+    });
+});
+
+function updateThinStats(postId) {
+    
+    fetch(`${STATS_API_URL}/get/techtouch-views/${postId}`)
+        .then(response => response.json())
+        .then(data => {
+            const viewsElement = document.getElementById('views-mini-thin-' + postId);
+            if (viewsElement && data.value) {
+                viewsElement.textContent = data.value;
+            }
+        })
+        .catch(error => {
+            console.log('Error getting views for thin card:', error);
+            
+            const viewsKey = 'global_views_' + postId;
+            let views = parseInt(localStorage.getItem(viewsKey) || '0');
+            const viewsElement = document.getElementById('views-mini-thin-' + postId);
+            if (viewsElement) {
+                viewsElement.textContent = views;
+            }
+        });
+
+    
+    fetch(`${STATS_API_URL}/get/techtouch-likes/${postId}`)
+        .then(response => response.json())
+        .then(data => {
+            const likesElement = document.getElementById('likes-mini-thin-' + postId);
+            if (likesElement) {
+                likesElement.textContent = data.value || 0;
+            }
+        })
+        .catch(error => {
+            console.log('Error getting likes for thin card:', error);
+            
+            const likesKey = 'global_likes_' + postId;
+            const likes = parseInt(localStorage.getItem(likesKey) || '0');
+            const likesElement = document.getElementById('likes-mini-thin-' + postId);
+            if (likesElement) {
+                likesElement.textContent = likes;
+            }
+        });
+}
+</script>
+
+        </main>
+
+        <footer class="footer">
+    <div class="footer-content">
+        <p class="channel-info">
+            <a href="https://t.me/techtouch7" target="_blank">
+                <i class="fab fa-telegram"></i> قناة techtouch
+            </a>
+        </p>
+        <div class="social-links">
+            <a href="https://www.facebook.com/kinan.mjeed.88" target="_blank">
+                <img src="/facebook_official_icon.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/techtouch0" target="_blank">
+                <img src="/instagram_official_icon.png" alt="Instagram">
+            </a>
+            <a href="https://youtube.com/@kinanmajeed" target="_blank">
+                <img src="/youtube_official_icon.png" alt="YouTube">
+            </a>
+            <a href="https://www.tiktok.com/@techtouch6" target="_blank">
+                <img src="/tiktok_official_icon.png" alt="TikTok">
+            </a>
+        </div>
+        <p class="copyright">جميع الحقوق محفوظة © 2025</p>
+    </div>
+</footer>
+
+
+    </div>
+
+    
+    <div id="popupModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <div id="modalContent" class="modal-grid"></div>
+        </div>
+    </div>
+
+    <script src="/script_ultimate_fix.js"></script>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script>
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/admin/";
+                    });
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+

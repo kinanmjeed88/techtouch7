@@ -11,9 +11,9 @@ collections:
     folder: "content/posts"
     create: true
     slug: "{{slug}}"
-    identifier_field: "date"
+    identifier_field: "title"
     fields:
-      - {label: "العنوان", name: "title", widget: "string", required: false}
+      - {label: "العنوان", name: "title", widget: "string", required: true}
       - {label: "التاريخ", name: "date", widget: "datetime", required: false}
       - {label: "المسودة", name: "draft", widget: "boolean", default: false}
       - {label: "الفئة", name: "category", widget: "select", options: ["movies", "sports", "video-design", "misc"], required: false}

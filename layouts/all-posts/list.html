@@ -10,10 +10,9 @@
     </div>
 
     <!-- بطاقة رفيعة لعرض جميع المنشورات مع ترقيم الصفحات -->
-    {{ $paginator := .Paginate (where .Site.RegularPages "Type" "posts") 10 }}
     <div class="all-posts-card">
         <div class="posts-grid-thin">
-            {{ range $paginator.Pages }}
+            {{ range .Paginator.Pages }}
             <div class="post-card-thin">
                 <div class="post-info">
                     <a href="{{ .Permalink }}">{{ .Title }}</a>
@@ -33,21 +32,7 @@
             {{ end }}
         </div>
         
-        <!-- ترقيم الصفحات -->
-        {{ if gt $paginator.TotalPages 1 }}
-        <nav class="pagination">
-            <a href="/" class="pagination-item pagination-home">الصفحة الرئيسية</a>
-            {{ if $paginator.HasPrev }}
-            <a href="{{ $paginator.Prev.URL }}" class="pagination-item pagination-prev">&#x2190; السابق</a>
-            {{ end }}
-            {{ range $paginator.Pagers }}
-            <a href="{{ .URL }}" class="pagination-item {{ if eq . $paginator }}is-active{{ end }}">{{ .PageNumber }}</a>
-            {{ end }}
-            {{ if $paginator.HasNext }}
-            <a href="{{ $paginator.Next.URL }}" class="pagination-item pagination-next">التالي &#x2192;</a>
-            {{ end }}
-        </nav>
-        {{ end }}
+        {{ partial "pagination.html" . }}
     </div>
 </div>
 
