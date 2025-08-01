@@ -7,6 +7,53 @@
 <a href=https://www.instagram.com/techtouch0 target=_blank><img src=/instagram_official_icon.png alt=Instagram></a>
 <a href=https://youtube.com/@kinanmajeed target=_blank><img src=/youtube_official_icon.png alt=YouTube></a>
 <a href=https://www.tiktok.com/@techtouch6 target=_blank><img src=/tiktok_official_icon.png alt=TikTok></a></div><p class=copyright>جميع الحقوق محفوظة © 2025</p></div></footer></div><div id=popupModal class=modal><div class=modal-content><span class=close-button>&#215;</span><h2 id=modalTitle></h2><div id=modalContent class=modal-grid></div></div></div><script src=/script_ultimate_fix.js></script>
-<script src=/js/search.js></script>
-<script src=https://identity.netlify.com/v1/netlify-identity-widget.js></script>
+<script>document.addEventListener("DOMContentLoaded",function(){if(!window.location.pathname.includes("/all-posts/")&&!window.location.href.includes("all-posts"))return;const s=document.createElement("div");s.id="search-container",s.style.cssText=`
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                margin: 20px;
+                padding: 0 20px;
+            `;const o=document.createElement("div");o.id="search-icon",o.innerHTML="🔍",o.style.cssText=`
+                font-size: 24px;
+                cursor: pointer;
+                padding: 10px;
+                border-radius: 50%;
+                background-color: #f0f0f0;
+                transition: background-color 0.3s ease;
+                user-select: none;
+            `;const t=document.createElement("div");t.id="search-box",t.style.cssText=`
+                display: none;
+                position: absolute;
+                right: 0;
+                top: 50px;
+                background: white;
+                border: 2px solid #ddd;
+                border-radius: 25px;
+                padding: 5px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                z-index: 1000;
+                min-width: 300px;
+            `;const n=document.createElement("input");n.id="search-input",n.type="text",n.placeholder="ابحث عن عنوان المنشور...",n.style.cssText=`
+                border: none;
+                outline: none;
+                padding: 10px 15px;
+                font-size: 16px;
+                width: calc(100% - 50px);
+                border-radius: 20px;
+                direction: rtl;
+                text-align: right;
+            `;const i=document.createElement("div");i.id="search-button",i.innerHTML="🔍",i.style.cssText=`
+                display: inline-block;
+                padding: 10px;
+                cursor: pointer;
+                font-size: 18px;
+                vertical-align: middle;
+            `,t.appendChild(n),t.appendChild(i),s.appendChild(o),s.appendChild(t);const e=document.createElement("div");e.id="search-results",e.style.cssText=`
+                margin: 20px;
+                padding: 20px;
+                background: #f9f9f9;
+                border-radius: 10px;
+                display: none;
+            `;const c=document.querySelector("main")||document.querySelector(".container")||document.body,a=document.querySelector(".posts-grid-thin")||document.querySelector(".posts-grid")||document.querySelector(".posts-container");a?(a.parentNode.insertBefore(s,a),a.parentNode.insertBefore(e,a)):(c.insertBefore(s,c.firstChild),c.insertBefore(e,c.children[1]));let r=[];function d(){const e=document.querySelectorAll(".post-card-thin, .post-card, .post-item, article, .post");r=Array.from(e).map(e=>{const t=e.querySelector("h2, h3, .post-title, .title, .post-info a")||e.querySelector("a"),n=e.querySelector("a")||t;return{element:e,title:t?t.textContent.trim():"",link:n?n.href:"#"}}).filter(e=>e.title)}function l(t){if(!t.trim()){e.style.display="none",r.forEach(e=>e.element.style.display="flex");return}const n=r.filter(e=>e.title.toLowerCase().includes(t.toLowerCase()));r.forEach(e=>e.element.style.display="none"),n.forEach(e=>e.element.style.display="flex"),u(n,t)}function u(t,n){if(e.innerHTML="",t.length===0)e.innerHTML=`<p style="text-align: center; color: #666;">لم يتم العثور على نتائج للبحث: "${n}"</p>`;else{const n=document.createElement("h3");n.textContent=`نتائج البحث (${t.length}):`,n.style.cssText="margin-bottom: 15px; color: #333;",e.appendChild(n)}e.style.display="block"}o.addEventListener("click",function(){t.style.display==="none"||!t.style.display?(t.style.display="block",n.focus(),d()):(t.style.display="none",e.style.display="none",n.value="",r.forEach(e=>e.element.style.display="flex"))}),n.addEventListener("input",function(){l(this.value)}),i.addEventListener("click",function(){l(n.value)}),n.addEventListener("keypress",function(e){e.key==="Enter"&&l(this.value)}),document.addEventListener("click",function(n){!s.contains(n.target)&&!e.contains(n.target)&&(t.style.display="none",e.style.display="none")}),o.addEventListener("mouseenter",function(){this.style.backgroundColor="#e0e0e0"}),o.addEventListener("mouseleave",function(){this.style.backgroundColor="#f0f0f0"}),console.log("ميزة البحث تم تحميلها بنجاح")})</script><script src=https://identity.netlify.com/v1/netlify-identity-widget.js></script>
 <script>window.netlifyIdentity&&window.netlifyIdentity.on("init",e=>{e||window.netlifyIdentity.on("login",()=>{document.location.href="/admin/"})})</script></body></html>
