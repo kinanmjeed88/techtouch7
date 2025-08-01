@@ -12,7 +12,8 @@
     <!-- بطاقة رفيعة لعرض جميع المنشورات مع ترقيم الصفحات -->
     <div class="all-posts-card">
         <div class="posts-grid-thin">
-            {{ range .Paginator.Pages }}
+            {{ $paginator := .Paginate (where .Site.RegularPages "Section" "posts") 10 }}
+            {{ range $paginator.Pages }}
             <div class="post-card-thin">
                 <div class="post-info">
                     <a href="{{ .Permalink }}">{{ .Title }}</a>
