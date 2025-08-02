@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تـ Cinemana X ايرثلنك - قناة TechTouch</title>
+    <title>Cinemana X - قناة TechTouch</title>
     <link rel="stylesheet" href="/style_enhanced.css">
+    <link rel="stylesheet" href="/style_modern.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -25,71 +26,273 @@
         <main class="main-content">
             
 <article class="single-post">
+    
+    <div class="back-to-home">
+        <a href="/" class="back-home-btn">
+            ← العودة للصفحة الرئيسية
+        </a>
+    </div>
+    
     <header class="post-header">
-        <h1>تـ Cinemana X ايرثلنك</h1>
+        <h1>Cinemana X</h1>
         <div class="post-meta">
-            <time datetime="2025-01-13">2025-01-13</time>
+            <time datetime="2025-08-02">2025-08-02</time>
             
-            <span class="post-category">أفلام</span>
+            <span class="post-category">movies</span>
             
+        </div>
+        
+        
+        <div class="post-stats">
+            <div class="views-counter">
+                <span class="views-icon">👁️</span>
+                <span id="views-count-3b6f015271c4a1b82c3da8c319c27680">0</span>
+                <span>مشاهدة</span>
+            </div>
+            <div class="likes-section">
+                <button id="like-btn-3b6f015271c4a1b82c3da8c319c27680" class="like-btn" onclick="toggleLike('3b6f015271c4a1b82c3da8c319c27680')">
+                    <span class="like-icon">❤️</span>
+                    <span id="likes-count-3b6f015271c4a1b82c3da8c319c27680">0</span>
+                </button>
+            </div>
         </div>
     </header>
     
     <div class="post-content">
-        <h1 id="تـ-cinemana-x-ايرثلنك">تـ Cinemana X ايرثلنك</h1>
-<p>تطبيق Cinemana X هو واحد من أفضل تطبيقات مشاهدة الأفلام والمسلسلات العربية والأجنبية بجودة عالية.</p>
-<h2 id="المميزات">المميزات:</h2>
-<ul>
-<li>مكتبة ضخمة من الأفلام والمسلسلات</li>
-<li>جودة فيديو متعددة (HD, Full HD, 4K)</li>
-<li>ترجمة عربية وإنجليزية</li>
-<li>تحديث مستمر للمحتوى</li>
-<li>واجهة سهلة الاستخدام</li>
-</ul>
-<h2 id="أنواع-المحتوى">أنواع المحتوى:</h2>
-<ul>
-<li>الأفلام العربية الحديثة والكلاسيكية</li>
-<li>الأفلام الأجنبية المترجمة</li>
-<li>المسلسلات العربية والتركية</li>
-<li>المسلسلات الأجنبية المدبلجة والمترجمة</li>
-<li>أفلام الكرتون والأنمي</li>
-</ul>
-<h2 id="طريقة-الاستخدام">طريقة الاستخدام:</h2>
-<ol>
-<li>قم بتحميل التطبيق</li>
-<li>افتح التطبيق وتصفح المحتوى</li>
-<li>اختر الفيلم أو المسلسل المطلوب</li>
-<li>حدد جودة الفيديو المناسبة</li>
-<li>استمتع بالمشاهدة</li>
-</ol>
-<p><a href="https://t.me/techtouch7/173">تحميل التطبيق</a></p>
+        <p><img src="/images/uploads/1000116536.png" alt="" title="سينمانا الاسود - Cinemana X"></p>
 
     </div>
     
     
-    <div class="download-section">
-        <a href="https://t.me/techtouch7/173" target="_blank" class="download-button">
-            <i class="fas fa-download"></i> تحميل
-        </a>
-    </div>
+    
+    
     
     
     <footer class="post-footer">
         <div class="post-navigation">
             
-            <a href="https://genuine-pegasus-297b04.netlify.app/posts/mixflix-tv/" class="prev-post">
-                <i class="fas fa-arrow-right"></i> المنشور السابق
+            
+            
+        </div>
+        
+        
+        <div class="back-to-home-footer">
+            <a href="/" class="back-home-btn-footer">
+                العودة للصفحة الرئيسية
             </a>
-            
-            
-            
-            <a href="https://genuine-pegasus-297b04.netlify.app/posts/mytv-iphone/" class="next-post">
-                المنشور التالي <i class="fas fa-arrow-left"></i>
-            </a>
-            
         </div>
     </footer>
 </article>
+
+<style>
+.post-stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+.views-counter {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+.views-icon {
+    font-size: 1.1rem;
+}
+
+.likes-section {
+    display: flex;
+    align-items: center;
+}
+
+.like-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.like-btn:hover {
+    background: #e9ecef;
+    transform: scale(1.05);
+}
+
+.like-btn.liked {
+    color: #dc3545;
+    background: #f8d7da;
+}
+
+.like-btn.liked .like-icon {
+    animation: heartbeat 0.6s ease-in-out;
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+}
+
+ 
+@media (max-width: 768px) {
+    .post-stats {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    .views-counter, .likes-section {
+        justify-content: center;
+    }
+}
+</style>
+
+<script>
+
+const STATS_API_URL = 'https://api.countapi.xyz';
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const postId = '3b6f015271c4a1b82c3da8c319c27680';
+    
+    
+    updateViewsCount(postId);
+    
+    
+    updateLikeButton(postId);
+});
+
+function updateViewsCount(postId) {
+    
+    fetch(`${STATS_API_URL}/hit/techtouch-views/${postId}`)
+        .then(response => response.json())
+        .then(data => {
+            const viewsElement = document.getElementById('views-count-' + postId);
+            if (viewsElement && data.value) {
+                viewsElement.textContent = data.value;
+            }
+        })
+        .catch(error => {
+            console.log('Error updating views:', error);
+            
+            const viewsKey = 'global_views_' + postId;
+            let views = parseInt(localStorage.getItem(viewsKey) || '0');
+            views++;
+            localStorage.setItem(viewsKey, views.toString());
+            
+            const viewsElement = document.getElementById('views-count-' + postId);
+            if (viewsElement) {
+                viewsElement.textContent = views;
+            }
+        });
+}
+
+function updateLikeButton(postId) {
+    
+    fetch(`${STATS_API_URL}/get/techtouch-likes/${postId}`)
+        .then(response => response.json())
+        .then(data => {
+            const likesElement = document.getElementById('likes-count-' + postId);
+            if (likesElement) {
+                likesElement.textContent = data.value || 0;
+            }
+            
+            
+            const likedKey = 'liked_' + postId;
+            const isLiked = localStorage.getItem(likedKey) === 'true';
+            const likeButton = document.getElementById('like-btn-' + postId);
+            
+            if (likeButton) {
+                if (isLiked) {
+                    likeButton.classList.add('liked');
+                } else {
+                    likeButton.classList.remove('liked');
+                }
+            }
+        })
+        .catch(error => {
+            console.log('Error getting likes:', error);
+            
+            const likesKey = 'global_likes_' + postId;
+            const likedKey = 'liked_' + postId;
+            
+            const likes = parseInt(localStorage.getItem(likesKey) || '0');
+            const isLiked = localStorage.getItem(likedKey) === 'true';
+            
+            const likesElement = document.getElementById('likes-count-' + postId);
+            const likeButton = document.getElementById('like-btn-' + postId);
+            
+            if (likesElement) {
+                likesElement.textContent = likes;
+            }
+            
+            if (likeButton) {
+                if (isLiked) {
+                    likeButton.classList.add('liked');
+                } else {
+                    likeButton.classList.remove('liked');
+                }
+            }
+        });
+}
+
+function toggleLike(postId) {
+    const likedKey = 'liked_' + postId;
+    const isLiked = localStorage.getItem(likedKey) === 'true';
+    
+    if (isLiked) {
+        
+        fetch(`${STATS_API_URL}/hit/techtouch-likes/${postId}/-1`)
+            .then(response => response.json())
+            .then(data => {
+                localStorage.setItem(likedKey, 'false');
+                updateLikeButton(postId);
+            })
+            .catch(error => {
+                console.log('Error removing like:', error);
+                
+                const likesKey = 'global_likes_' + postId;
+                let likes = parseInt(localStorage.getItem(likesKey) || '0');
+                likes = Math.max(0, likes - 1);
+                localStorage.setItem(likesKey, likes.toString());
+                localStorage.setItem(likedKey, 'false');
+                updateLikeButton(postId);
+            });
+    } else {
+        
+        fetch(`${STATS_API_URL}/hit/techtouch-likes/${postId}`)
+            .then(response => response.json())
+            .then(data => {
+                localStorage.setItem(likedKey, 'true');
+                updateLikeButton(postId);
+            })
+            .catch(error => {
+                console.log('Error adding like:', error);
+                
+                const likesKey = 'global_likes_' + postId;
+                let likes = parseInt(localStorage.getItem(likesKey) || '0');
+                likes++;
+                localStorage.setItem(likesKey, likes.toString());
+                localStorage.setItem(likedKey, 'true');
+                updateLikeButton(postId);
+            });
+    }
+}
+</script>
 
         </main>
 

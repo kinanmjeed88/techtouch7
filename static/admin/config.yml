@@ -1,6 +1,6 @@
-backend:
-  name: git-gateway
-  branch: master
+backend  name: git-gateway
+  repo: kinanmjeed88/techtouch7
+  branch: main
 
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
