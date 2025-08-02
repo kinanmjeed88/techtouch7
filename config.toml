@@ -53,10 +53,5 @@ disablePathToLower = true
   [mediaTypes."application/json"]
     suffixes = ["json"]
 
-[outputFormats.JSON]
-    mediaType = "application/json"
-    isPlainText = true
-    notAlternative = true
-
 
 
