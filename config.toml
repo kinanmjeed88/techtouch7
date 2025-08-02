@@ -65,3 +65,8 @@ disablePathToLower = true
 
 
 
+
+
+[params]
+  contentType = "text/html; charset=utf-8"
+
