@@ -1,4 +1,5 @@
-backend  name: git-gateway
+backend:
+  name: git-gateway
   repo: kinanmjeed88/techtouch7
   branch: main
 
@@ -21,4 +22,5 @@ collections:
       - {label: "الرابط", name: "link", widget: "string", required: false}
       - {label: "المحتوى", name: "body", widget: "markdown", required: false}
       - {label: "ملف التحميل", name: "download_file", widget: "file", allow_multiple: false, required: false}
+
 
