@@ -56,8 +56,8 @@ disablePathToLower = true
 [outputFormats]
   [outputFormats.JSON]
     mediaType = "application/json"
-    is  PlainText = true
-    not  Alternative = true
+    isPlainText = true
+    notAlternative = true
 
 
 
