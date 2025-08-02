@@ -10,10 +10,6 @@ link: "21"
 ---
 
 
-![](/images/uploads/1000109848.jpg)
-
-
-
 ```apl
 
 ```
