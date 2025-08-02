@@ -12,5 +12,5 @@ link: https://t.me/techtouch7/1733
 download_file: ""
 featured_image: /images/uploads/img_٢٠٢٥٠٨٠٢_١٦٢٦٠٥.png
 tags:
-  - "#AI_Keyboard"
+  - AI_Keyboard
 ---
