@@ -1,5 +1,5 @@
 ---
-title: " Cinemana X "
+title: " Cinemana X 2"
 date: 2025-08-01T22:39:46.861Z
 draft: false
 category: movies
@@ -13,3 +13,5 @@ link: "21"
 ```apl
 
 ```
+
+![](/images/uploads/1000109848.jpg)
