@@ -132,21 +132,21 @@
     <h2>آخر المنشورات</h2>
     <div class="posts-grid">
         {{ range first 6 .Site.RegularPages }}
-        <article class="post-card">
-            <h3>
-                <a href="{{ .Permalink }}">{{ .Title }}</a>
+        <article class="post-card" style="height: 80px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; background-color: #f0f0f0; border-radius: 8px; padding: 10px;">
+            <h3 style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 1.2em;">
+                <a href="{{ .Permalink }}" style="color: #333; text-decoration: none;">{{ .Title }}</a>
                 {{ if .Params.download_file }}
-                <span class="download-icon" title="يحتوي على ملف للتحميل">
+                <span class="download-icon" title="يحتوي على ملف للتحميل" style="margin-left: 5px;">
                     <i class="fas fa-download"></i>
                 </span>
                 {{ end }}
             </h3>
-            <p class="post-date">{{ .Date.Format "2006-01-02" }}</p>
-            <p class="post-summary">{{ .Summary }}</p>
         </article>
         {{ end }}
     </div>
 </section>
 {{ end }}
 {{ end }}
+
+
 
