@@ -1,5 +1,5 @@
 ---
-title: AI Keyboard
+title: AI Keyboard ٢
 date: 2025-08-02T14:16:32.254Z
 draft: false
 category: misc
