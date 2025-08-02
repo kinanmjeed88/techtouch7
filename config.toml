@@ -10,11 +10,14 @@ paginatePath = "page"
 [params]
   description = "اضغط على أي قسم للانتقال إليه مباشرة"
   author = "TechTouch"
+  contentType = "text/html; charset=utf-8"
   
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+  [markup.highlight]
+    noClasses = false
 
 # إعدادات الروابط الدائمة
 [permalinks]
@@ -42,13 +45,6 @@ disablePathToLower = true
     weight = 1
     rtl = true
 
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
-  [markup.highlight]
-    noClasses = false
-
 [outputs]
   home = ["HTML", "RSS", "JSON"]
   page = ["HTML"]
@@ -64,11 +60,6 @@ disablePathToLower = true
     not  Alternative = true
 
 
-
-
-
-[params]
-  contentType = "text/html; charset=utf-8"
 
 
 
