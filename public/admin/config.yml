@@ -20,7 +20,9 @@ collections:
       - {label: "الفئة", name: "category", widget: "select", options: ["movies", "sports", "video-design", "misc"], required: false}
       - {label: "الوصف", name: "description", widget: "text", required: false}
       - {label: "الرابط", name: "link", widget: "string", required: false}
-      - {label: "المحتوى", name: "body", widget: "markdown", required: false}
+      - {label: "المحتوى", name: "body", widget: "markdown", required: false, editor_components: ["image", "code"]}
       - {label: "ملف التحميل", name: "download_file", widget: "file", allow_multiple: false, required: false}
+      - {label: "صورة المنشور", name: "featured_image", widget: "image", required: false}
+      - {label: "الكلمات المفتاحية", name: "tags", widget: "list", required: false}
 
 
