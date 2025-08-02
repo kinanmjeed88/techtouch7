@@ -9,6 +9,9 @@
     
     <header class="post-header">
         <h1>{{ .Title }}</h1>
+        {{ if .Params.description }}
+        <p class="post-description">{{ .Params.description }}</p>
+        {{ end }}
         <div class="post-meta">
             <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
             {{ if .Params.category }}
@@ -24,7 +27,7 @@
                 <span>مشاهدة</span>
             </div>
             <div class="likes-section">
-                <button id="like-btn-{{ .File.UniqueID }}" class="like-btn" onclick="toggleLike('{{ .File.UniqueID }}')">
+                <button id="like-btn-{{ .File.UniqueID }}" class="like-btn" onclick="toggleLike(\'{{ .File.UniqueID }}\')">
                     <span class="like-icon">❤️</span>
                     <span id="likes-count-{{ .File.UniqueID }}">0</span>
                 </button>
@@ -35,6 +38,14 @@
     <div class="post-content">
         {{ .Content }}
     </div>
+    
+    {{ if .Params.link }}
+    <div class="post-link-section">
+        <a href="{{ .Params.link }}" target="_blank" class="post-link-btn">
+            الذهاب إلى الرابط
+        </a>
+    </div>
+    {{ end }}
     
     <!-- عرض الملف المرفق إذا كان موجوداً -->
     {{ if .Params.file_upload }}
@@ -154,6 +165,33 @@
     .views-counter, .likes-section {
         justify-content: center;
     }
+}
+
+.post-description {
+    margin-top: 10px;
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.post-link-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.post-link-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.post-link-btn:hover {
+    background-color: #0056b3;
 }
 </style>
 

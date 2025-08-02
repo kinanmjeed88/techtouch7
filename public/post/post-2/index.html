@@ -35,6 +35,7 @@
     
     <header class="post-header">
         <h1>منشور تجريبي 2</h1>
+        
         <div class="post-meta">
             <time datetime="2024-03-03">2024-03-03</time>
             
@@ -48,7 +49,7 @@
                 <span>مشاهدة</span>
             </div>
             <div class="likes-section">
-                <button id="like-btn-84296823a6ffd479b8aeebfd5033d315" class="like-btn" onclick="toggleLike('84296823a6ffd479b8aeebfd5033d315')">
+                <button id="like-btn-84296823a6ffd479b8aeebfd5033d315" class="like-btn" onclick="toggleLike(\'84296823a6ffd479b8aeebfd5033d315\')">
                     <span class="like-icon">❤️</span>
                     <span id="likes-count-84296823a6ffd479b8aeebfd5033d315">0</span>
                 </button>
@@ -60,6 +61,8 @@
         <p>هذا محتوى المنشور التجريبي رقم 2. يحتوي على نص تجريبي لاختبار ميزة ترقيم الصفحات.</p>
 
     </div>
+    
+    
     
     
     
@@ -164,6 +167,33 @@
     .views-counter, .likes-section {
         justify-content: center;
     }
+}
+
+.post-description {
+    margin-top: 10px;
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.post-link-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.post-link-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.post-link-btn:hover {
+    background-color: #0056b3;
 }
 </style>
 
