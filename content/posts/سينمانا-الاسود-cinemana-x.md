@@ -1,5 +1,5 @@
 ---
-title: Cinemana X
+title: Cinemana X 2
 date: 2025-08-02T12:27:22.806Z
 draft: false
 category: movies
