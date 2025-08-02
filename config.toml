@@ -1,4 +1,4 @@
-baseURL = "https://genuine-pegasus-297b04.netlify.app/"
+
 languageCode = "ar"
 title = "قناة TechTouch"
 defaultContentLanguage = "ar"
@@ -25,6 +25,43 @@ paginatePath = "page"
     name = "الرئيسية"
     url = "/"
     weight = 1
+
+
+
+
+
+uglyURLs = true
+disablePathToLower = true
+
+
+
+[languages]
+  [languages.ar]
+    contentDir = "content"
+    languageName = "العربية"
+    weight = 1
+    rtl = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    noClasses = false
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  page = ["HTML"]
+
+[mediaTypes]
+  [mediaTypes."application/json"]
+    suffixes = ["json"]
+
+[outputFormats]
+  [outputFormats.JSON]
+    mediaType = "application/json"
+    is  PlainText = true
+    not  Alternative = true
 
 
 

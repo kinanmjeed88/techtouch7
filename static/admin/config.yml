@@ -23,6 +23,6 @@ collections:
       - {label: "المحتوى", name: "body", widget: "markdown", required: false, editor_components: ["image", "code"]}
       - {label: "ملف التحميل", name: "download_file", widget: "file", allow_multiple: false, required: false}
       - {label: "صورة المنشور", name: "featured_image", widget: "image", required: false}
-      - {label: "الكلمات المفتاحية", name: "tags", widget: "list", required: false}
+      - {label: "الكلمات المفتاحية", name: "tags", widget: "list", required: false, pattern: ['^[\p{L}\p{N}_-]+$', "Tag can only contain letters, numbers, underscores, and hyphens"]}
 
 

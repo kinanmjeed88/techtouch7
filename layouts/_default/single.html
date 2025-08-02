@@ -9,6 +9,9 @@
     
     <header class="post-header">
         <h1>{{ .Title }}</h1>
+        {{ if .Params.featured_image }}
+        <img src="{{ .Params.featured_image | relURL }}" alt="{{ .Title }}" class="featured-image">
+        {{ end }}
         {{ if .Params.description }}
         <p class="post-description">{{ .Params.description }}</p>
         {{ end }}
@@ -48,11 +51,11 @@
     {{ end }}
     
     <!-- عرض الملف المرفق إذا كان موجوداً -->
-    {{ if .Params.file_upload }}
+    {{ if .Params.download_file }}
     <div class="file-attachment-section">
         <h3>الملف المرفق</h3>
         <div class="file-attachment">
-            <a href="{{ .Params.file_upload | relURL }}" class="file-attachment-btn" download>
+            <a href="{{ .Params.download_file | relURL }}" class="file-attachment-btn" download>
                 📎 تحميل الملف المرفق
             </a>
         </div>
@@ -328,4 +331,42 @@ function toggleLike(postId) {
 }
 </script>
 {{ end }}
+
+
+
+    {{ if .Params.tags }}
+    <div class="post-tags">
+        <h3>الكلمات المفتاحية:</h3>
+        {{ range .Params.tags }}
+        <span class="tag">{{ . }}</span>
+        {{ end }}
+    </div>
+    {{ end }}
+
+<style>
+.post-tags {
+    margin-top: 20px;
+    padding: 10px;
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+.post-tags h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+</style>
 
