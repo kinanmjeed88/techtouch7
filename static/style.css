@@ -1145,11 +1145,16 @@ body {
     .simple-post-card {
         padding: 12px;
         height: 80px;
+        /* إجبار العرض على الأجهزة المحمولة */
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
     
     .simple-post-title {
         font-size: 0.95rem;
         margin-right: 10px;
+        color: #667eea !important;
     }
     
     .simple-post-date {
@@ -1161,5 +1166,34 @@ body {
         font-size: 1.4rem;
         margin-bottom: 15px;
     }
+    
+    /* إجبار ظهور زر العودة للأعلى على الأجهزة المحمولة */
+    .back-to-top {
+        display: block !important;
+        position: fixed !important;
+        z-index: 9999 !important;
+    }
+    
+    .back-to-top.show {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: translateY(0) !important;
+    }
+}
+
+/* إضافة أنماط إضافية للتأكد من العرض */
+.recent-posts {
+    display: block !important;
+    visibility: visible !important;
+}
+
+.simple-posts-grid {
+    display: grid !important;
+    visibility: visible !important;
+}
+
+.simple-post-card {
+    display: flex !important;
+    visibility: visible !important;
 }
 
