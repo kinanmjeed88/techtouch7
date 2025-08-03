@@ -10,7 +10,7 @@ description: |-
   تطبيقات رياضيه
   تصميم الفيديو
   قسم المتفرقـات
-image: https://t.me/techtouch7/2874
+image: /images/uploads/1000109848.jpg
 ---
 ![](/images/uploads/1000109848.jpg)
 
