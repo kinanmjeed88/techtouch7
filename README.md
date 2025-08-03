@@ -99,3 +99,7 @@ baseURL = "https://موقعك.com"
 ## الدعم
 للمساعدة أو الاستفسارات، تواصل معنا عبر قناة TechTouch.
 
+
+
+<!-- Minor change to trigger Netlify redeploy -->
+
