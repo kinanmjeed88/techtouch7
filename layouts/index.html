@@ -130,20 +130,12 @@
 {{ if .Site.RegularPages }}
 <section class="recent-posts">
     <h2>آخر المنشورات</h2>
-    <div class="posts-grid">
+    <div class="simple-posts-grid">
         {{ range first 6 .Site.RegularPages }}
-        <article class="post-card">
-            <h3>
-                <a href="{{ .Permalink }}">{{ .Title }}</a>
-                {{ if .Params.download_file }}
-                <span class="download-icon" title="يحتوي على ملف للتحميل">
-                    <i class="fas fa-download"></i>
-                </span>
-                {{ end }}
-            </h3>
-            <p class="post-date">{{ .Date.Format "2006-01-02" }}</p>
-            <p class="post-summary">{{ .Summary }}</p>
-        </article>
+        <div class="simple-post-card" onclick="window.location.href='{{ .Permalink }}'">
+            <div class="simple-post-title">{{ .Title }}</div>
+            <div class="simple-post-date">{{ .Date.Format "2006-01-02" }}</div>
+        </div>
         {{ end }}
     </div>
 </section>

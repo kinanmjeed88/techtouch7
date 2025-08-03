@@ -19,5 +19,5 @@ collections:
       - {label: "الوصف", name: "description", widget: "text", required: true}
       - {label: "الصورة (اختيارية)", name: "image", widget: "image", required: false}
       - {label: "الملف (اختياري)", name: "file", widget: "file", required: false}
-      - {label: "المحتوى", name: "body", widget: "markdown", required: true}
+      - {label: "المحتوى", name: "body", widget: "markdown", required: false}
 

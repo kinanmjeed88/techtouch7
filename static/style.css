@@ -975,3 +975,90 @@ body {
     font-size: 1.1rem;
 }
 
+
+/* أنماط البطاقات الصغيرة والبسيطة لآخر المنشورات */
+.simple-posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.simple-post-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 15px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.simple-post-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.simple-post-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 5px;
+}
+
+.simple-post-date {
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: 400;
+}
+
+/* تحسين للشاشات الصغيرة */
+@media (max-width: 768px) {
+    .simple-posts-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 12px;
+    }
+    
+    .simple-post-card {
+        padding: 12px;
+        height: 80px;
+    }
+    
+    .simple-post-title {
+        font-size: 0.95rem;
+    }
+    
+    .simple-post-date {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .simple-posts-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .simple-post-card {
+        padding: 10px;
+        height: 80px;
+    }
+    
+    .simple-post-title {
+        font-size: 0.9rem;
+    }
+    
+    .simple-post-date {
+        font-size: 0.75rem;
+    }
+}
+
