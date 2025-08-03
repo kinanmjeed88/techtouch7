@@ -448,7 +448,7 @@ body {
 }
 
 .social-links a {
-    font-size: 2rem;
+    font-size: 1.5rem; /* تم تقليل حجم الخط */
     color: #667eea;
     transition: color 0.3s ease, transform 0.3s ease;
 }
