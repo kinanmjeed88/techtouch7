@@ -1021,12 +1021,12 @@ body {
     padding: 15px;
     height: 80px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
 }
 
@@ -1034,6 +1034,7 @@ body {
     transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     background: rgba(255, 255, 255, 0.95);
+    border-color: #667eea;
 }
 
 .simple-post-title {
@@ -1043,13 +1044,15 @@ body {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin-bottom: 5px;
+    flex: 1;
+    margin-right: 10px;
 }
 
 .simple-post-date {
     font-size: 0.85rem;
     color: #666;
     font-weight: 400;
+    white-space: nowrap;
 }
 
 /* تحسين للشاشات الصغيرة */
