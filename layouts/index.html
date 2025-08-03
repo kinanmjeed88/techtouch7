@@ -130,11 +130,16 @@
 {{ if .Site.RegularPages }}
 <section class="recent-posts">
     <h2>آخر المنشورات</h2>
-    <div class="simple-posts-grid">
+    <div class="modern-posts-grid">
         {{ range first 6 .Site.RegularPages }}
-        <div class="simple-post-card" onclick="window.location.href='{{ .Permalink }}'">
-            <div class="simple-post-title">{{ .Title }}</div>
-            <div class="simple-post-date">{{ .Date.Format "2006-01-02" }}</div>
+        <div class="modern-post-card" onclick="window.location.href='{{ .Permalink }}'">
+            <div class="modern-post-content">
+                <div class="modern-post-title">{{ .Title }}</div>
+                <div class="modern-post-date">{{ .Date.Format "2006-01-02" }}</div>
+            </div>
+            <div class="modern-post-arrow">
+                <i class="fas fa-chevron-right"></i>
+            </div>
         </div>
         {{ end }}
     </div>
