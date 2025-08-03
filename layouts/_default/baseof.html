@@ -60,11 +60,11 @@
         const backToHomeButton = document.getElementById('backToHome');
         if (window.pageYOffset > 300) {
             backToTopButton.classList.add('show');
-            backToHomeButton.classList.add('show');
         } else {
             backToTopButton.classList.remove('show');
-            backToHomeButton.classList.remove('show');
         }
+        // زر الهوم يظهر دائماً
+        backToHomeButton.classList.add('show');
     });
 
     // وظيفة العودة للأعلى

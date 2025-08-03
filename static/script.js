@@ -191,18 +191,18 @@ document.addEventListener('DOMContentLoaded', function() {
             let dropdownId = '';
             let title = '';
             
-            if (headerText.includes('تطبيقات افـلام')) {
+            if (headerText.includes('تطبيقات افلام')) {
                 dropdownId = 'movies-dropdown';
-                title = 'تطبيقات افـلام';
+                title = 'تطبيقات افلام';
             } else if (headerText.includes('تطبيقات رياضيه')) {
                 dropdownId = 'sports-dropdown';
                 title = 'تطبيقات رياضيه';
             } else if (headerText.includes('تصميم الفيديو')) {
                 dropdownId = 'video-dropdown';
                 title = 'تصميم الفيديو';
-            } else if (headerText.includes('قسم المتفرقـات')) {
+            } else if (headerText.includes('قسم المتفرقات')) {
                 dropdownId = 'misc-dropdown';
-                title = 'قسم المتفرقـات';
+                title = 'قسم المتفرقات';
             }
             
             console.log('Determined dropdown:', dropdownId, title);
