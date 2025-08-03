@@ -453,6 +453,12 @@ body {
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
+.social-links a img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
 .social-links a:hover {
     color: #764ba2;
     transform: scale(1.1);
