@@ -28,7 +28,7 @@ body {
 /* Header Styles */.header {
     text-align: center;
     margin-bottom: 20px;
-    background: #1A5493;
+    background: #e3f2fd;
     padding: 25px;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 136, 204, 0.1);
@@ -37,7 +37,7 @@ body {
 }
 
 .footer {
-    background: #1A5493;
+    background: #e3f2fd;
     border-radius: 20px;
     padding: 20px;
     text-align: center;
