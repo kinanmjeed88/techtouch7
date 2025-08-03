@@ -11,6 +11,7 @@ description: |-
   تصميم الفيديو
   قسم المتفرقـات
 image: /images/uploads/1000109848.jpg
+file: https://t.me/techtouch7/2874
 ---
 
 
