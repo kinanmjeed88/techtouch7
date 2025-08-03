@@ -12,10 +12,12 @@ description: |-
   قسم المتفرقـات
 image: /images/uploads/1000109848.jpg
 ---
+
+
 ![](/images/uploads/1000109848.jpg)
 
 ```
 تحميل 
 👇
-https://t.me/techtouch7/2874
+
 ```
