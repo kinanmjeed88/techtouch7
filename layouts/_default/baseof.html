@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ .Title }} - {{ .Site.Title }}</title>
-    <link rel="stylesheet" href="{{ "style_enhanced.css" | relURL }}">
-    <link rel="stylesheet" href="{{ "download-styles.css" | relURL }}">
+    <link rel="stylesheet" href="{{ "style.css" | relURL }}">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
@@ -30,7 +29,17 @@
         </div>
     </div>
 
-    <script src="{{ "script_ultimate_fix.js" | relURL }}"></script>
+    <!-- زر العودة للصفحة الرئيسية -->
+    <button id="backToHome" class="back-to-home" onclick="window.location.href='/'">
+        <i class="fas fa-home"></i>
+    </button>
+
+    <!-- زر العودة للأعلى -->
+    <button id="backToTop" class="back-to-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="{{ "script.js" | relURL }}"></script>
     
     <script>
       if (window.netlifyIdentity) {
@@ -43,140 +52,30 @@
         });
       }
     </script>
+
+    <script>
+    // إظهار/إخفاء الأزرار العائمة
+    window.addEventListener('scroll', function() {
+        const backToTopButton = document.getElementById('backToTop');
+        const backToHomeButton = document.getElementById('backToHome');
+        if (window.pageYOffset > 300) {
+            backToTopButton.classList.add('show');
+            backToHomeButton.classList.add('show');
+        } else {
+            backToTopButton.classList.remove('show');
+            backToHomeButton.classList.remove('show');
+        }
+    });
+
+    // وظيفة العودة للأعلى
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+    </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- زر العودة للصفحة الرئيسية -->
-<button id="backToHome" class="back-to-home" onclick="window.location.href=\\'/\\'\">
-    <i class="fas fa-home"></i>
-</button>
-
-<!-- زر العودة للأعلى -->
-<button id="backToTop" class="back-to-top" onclick="scrollToTop()">
-    <i class="fas fa-arrow-up"></i>
-</button>
-
-<!-- CSS لزر العودة للأعلى -->
-<style>
-.back-to-top {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 50px;
-    height: 50px;
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 1.2rem;
-    box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
-    transition: all 0.3s ease;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(20px);
-    z-index: 1000;
-}
-
-.back-to-top.show {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-.back-to-top:hover {
-    transform: translateY(-3px) scale(1.1);
-    box-shadow: 0 8px 30px rgba(102, 126, 234, 0.4);
-    background: linear-gradient(135deg, #764ba2, #667eea);
-}
-
-/* CSS لزر العودة للصفحة الرئيسية */
-.back-to-home {
-    position: fixed;
-    bottom: 90px; /* أعلى بـ 60 بكسل من زر العودة للأعلى (30px + 30px فاصل) */
-    right: 30px;
-    width: 50px;
-    height: 50px;
-    background: linear-gradient(135deg, #2ecc71, #27ae60); /* لون أخضر جذاب */
-    color: white;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 1.2rem;
-    box-shadow: 0 4px 20px rgba(46, 204, 113, 0.3);
-    transition: all 0.3s ease;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(20px);
-    z-index: 1000;
-}
-
-.back-to-home.show {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-.back-to-home:hover {
-    transform: translateY(-3px) scale(1.1);
-    box-shadow: 0 8px 30px rgba(46, 204, 113, 0.4);
-    background: linear-gradient(135deg, #27ae60, #2ecc71);
-}
-
-@media (max-width: 768px) {
-    .back-to-top {
-        bottom: 20px;
-        right: 20px;
-        width: 45px;
-        height: 45px;
-        font-size: 1.1rem;
-    }
-    .back-to-home {
-        bottom: 75px; /* 20px + 35px فاصل */
-        right: 20px;
-        width: 45px;
-        height: 45px;
-        font-size: 1.1rem;
-    }
-}
-</style>
-
-<!-- JavaScript لزر العودة للأعلى -->
-<script>
-// إظهار/إخفاء زر العودة للأعلى
-window.addEventListener(\\'scroll\\\
-
-
-', function() {
-    const backToTopButton = document.getElementById('backToTop');
-    const backToHomeButton = document.getElementById('backToHome');
-    if (window.pageYOffset > 300) {
-        backToTopButton.classList.add('show');
-        backToHomeButton.classList.add('show');
-    } else {
-        backToTopButton.classList.remove('show');
-        backToHomeButton.classList.remove('show');
-    }
-});
-
-// وظيفة العودة للأعلى
-function scrollToTop() {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-}
-</script>
 
 
