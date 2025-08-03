@@ -1,4 +1,4 @@
-baseURL = "https://techtouch.example.com"
+baseURL = "https://genuine-pegasus-297b04.netlify.app/"
 languageCode = "ar"
 title = "قناة TechTouch"
 defaultContentLanguage = "ar"
@@ -17,4 +17,7 @@ defaultContentLanguage = "ar"
     name = "الرئيسية"
     url = "/"
     weight = 1
+
+
+
 
