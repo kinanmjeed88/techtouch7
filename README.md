@@ -103,3 +103,7 @@ baseURL = "https://موقعك.com"
 
 <!-- Minor change to trigger Netlify redeploy -->
 
+
+
+<!-- Forced rebuild trigger -->
+
