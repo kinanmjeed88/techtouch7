@@ -10,21 +10,19 @@
         </div>
     </header>
     
+    {{ if .Params.image }}
+    <div class="post-image">
+        <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" class="responsive-image">
+    </div>
+    {{ end }}
+    
     <div class="post-content">
         {{ .Content }}
     </div>
     
-    {{ if .Params.download_link }}
+    {{ if .Params.file }}
     <div class="download-section">
-        <a href="{{ .Params.download_link }}" target="_blank" class="download-button">
-            <i class="fas fa-download"></i> تحميل
-        </a>
-    </div>
-    {{ end }}
-    
-    {{ if .Params.download_file }}
-    <div class="download-section">
-        <a href="{{ .Params.download_file }}" target="_blank" class="download-button">
+        <a href="{{ .Params.file | relURL }}" target="_blank" class="download-button">
             <i class="fas fa-download"></i> تحميل الملف
         </a>
     </div>
