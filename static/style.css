@@ -769,19 +769,19 @@ body {
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 12px; /* تم تقليل المسافة بين الأيقونات */
+    gap: 15px; /* تم تقليل المسافة بين الأيقونات */
     margin: 15px 0;
 }
 
 .social-links a {
-    font-size: 1.2rem; /* تم تصغير حجم الخط من 1.5rem */
+    font-size: 1.5rem; /* تم تصغير حجم الخط من 1.5rem */
     color: var(--telegram-blue);
     transition: all 0.3s ease;
 }
 
 .social-links a img {
-    width: 24px; /* تم تصغير الحجم من 30px */
-    height: 24px; /* تم تصغير الحجم من 30px */
+    width: 27px; /* تم تصغير الحجم من 30px */
+    height: 27px; /* تم تصغير الحجم من 30px */
     object-fit: contain;
     transition: all 0.3s ease;
 }
@@ -798,7 +798,7 @@ body {
     }
     
     .social-links a {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
     
     .social-links a img {
@@ -817,7 +817,7 @@ body {
     }
     
     .social-links a img {
-        width: 25px;
-        height: 25px;
+        width: 30px;
+        height: 30px;
     }
         }
