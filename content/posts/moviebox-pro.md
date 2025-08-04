@@ -8,7 +8,7 @@ description: تطبيقات افـلام
 image: /images/uploads/1000118976.jpg
 file: https://t.me/techtouch7/2070
 ---
-![](/images/uploads/1000118976.jpg)
+![]()
 
 ```
 
