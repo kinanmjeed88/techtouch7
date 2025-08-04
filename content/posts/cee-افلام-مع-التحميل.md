@@ -4,5 +4,6 @@ date: 2025-08-03T16:19:35.851Z
 draft: false
 category: movies
 description: مشاهدة وتحميل الافلام والمسلسلات مع التحميل
-image: /images/uploads/1000118911.jpg
+image: /images/uploads/1000118884.jpg
+file: https://t.me/techtouch7/174
 ---
