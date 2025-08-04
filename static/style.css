@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Iphone Arabic', 'Cairo', sans-serif;
 }
 
 @font-face {
@@ -23,6 +24,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    font-family: 'Iphone Arabic', 'Cairo', sans-serif;
 }
 
 /* Header Styles */.header {
@@ -79,6 +81,7 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     transition: all 0.3s ease;
+    font-family: 'Iphone Arabic', 'Cairo', sans-serif;
 }
 
 .profile-link:hover .profile-name {
@@ -90,6 +93,7 @@ body {
     color: #0a3d62;
     font-weight: 400;
     margin: 0;
+    font-family: 'Iphone Arabic', 'Cairo', sans-serif;
 }
 
 /* Featured Cards Section */
@@ -173,6 +177,7 @@ body {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-family: 'Iphone Arabic', 'Cairo', sans-serif;
 }
 
 .cards-grid {
@@ -253,6 +258,7 @@ body {
     margin: 0;
     line-height: 1.3;
     text-align: right;
+    font-family: 'Iphone Arabic', 'Cairo', sans-serif;
 }
 .sub-section {
     margin-bottom: 8px;
