@@ -13,9 +13,9 @@
 
 body {
     font-family: 'Iphone Arabic', 'Cairo', sans-serif;
-    background: #4a154b; /* تغيير اللون الأساسي */
+    background: #e3f2fd;
     min-height: 100vh;
-    color: #f0e6f2; /* تغيير لون النص */
+    color: #0a3d62;
     line-height: 1.6;
 }
 
@@ -25,46 +25,35 @@ body {
     padding: 20px;
 }
 
-/* Header Styles */
-.header {
+/* Header Styles */.header {
     text-align: center;
     margin-bottom: 20px;
-    background: #f4e5f7; /* لون خلفية جديد */
+    background: #e3f2fd;
     padding: 25px;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(142, 68, 173, 0.1); /* تعديل ظل */
+    box-shadow: 0 10px 30px rgba(0, 136, 204, 0.1);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(142, 68, 173, 0.2); /* تعديل حدود */
+    border: 1px solid rgba(0, 136, 204, 0.2);
 }
 
 .footer {
-    background: #f4e5f7; /* لون خلفية جديد */
+    background: #e3f2fd;
     border-radius: 20px;
     padding: 20px;
     text-align: center;
     margin-top: 15px;
-    box-shadow: 0 8px 25px rgba(142, 68, 173, 0.1); /* تعديل ظل */
+    box-shadow: 0 8px 25px rgba(0, 136, 204, 0.1);
     backdrop-filter: blur(10px);
-    border: 2px solid rgba(142, 68, 173, 0.2); /* تعديل حدود */
-}
-
-.profile-link {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    text-decoration: none;
-    padding: 10px;
-    border-radius: 15px;
-    transition: all 0.3s ease;
-    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(0, 136, 204, 0.2);
+}1);
     border: 2px solid transparent;
 }
 
 .profile-link:hover {
     transform: translateY(-2px);
-    background: rgba(165, 105, 189, 0.2); /* لون جديد */
-    border-color: rgba(165, 105, 189, 0.3); /* لون جديد */
-    box-shadow: 0 5px 15px rgba(165, 105, 189, 0.2); /* لون جديد */
+    background: rgba(102, 126, 234, 0.2);
+    border-color: rgba(102, 126, 234, 0.3);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
 }
 
 .profile-pic {
@@ -72,20 +61,20 @@ body {
     height: 50px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #a569bd; /* لون جديد */
+    border: 3px solid #667eea;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
 }
 
 .profile-link:hover .profile-pic {
     transform: scale(1.05);
-    border-color: #8e44ad; /* لون جديد */
+    border-color: #764ba2;
 }
 
 .profile-name {
     font-size: 1.4rem;
     font-weight: 700;
-    background: linear-gradient(135deg, #8e44ad, #9b59b6); /* ألوان جديدة */
+    background: linear-gradient(135deg, #006699, #0088cc);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -98,25 +87,25 @@ body {
 
 .subtitle {
     font-size: 1rem;
-    color: #4a154b; /* لون جديد */
+    color: #0a3d62;
     font-weight: 400;
     margin: 0;
 }
 
 /* Featured Cards Section */
 .featured-section {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Reduced margin */
 }
 
 .featured-cards-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Reduced margin */
 }
 
 .featured-card {
-    background: rgba(244, 229, 247, 0.95); /* لون جديد */
+    background: rgba(240, 240, 240, 0.95);
     border-radius: 15px;
     padding: 15px;
     text-align: center;
@@ -124,10 +113,10 @@ body {
     transition: all 0.3s ease;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 255, 255, 0.8);
+    border: 2px solid rgba(255, 255, 255, 0.8); /* White border */
     position: relative;
     overflow: hidden;
-    height: 80px;
+    height: 80px; /* Adjusted height to 80px */
     display: flex;
     align-items: center;
     gap: 5px;
@@ -153,24 +142,24 @@ body {
     transform: translateY(-5px) scale(1.02);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
     background: rgba(250, 250, 250, 1);
-    border-color: #a569bd; /* لون جديد */
+    border-color: #667eea;
 }
 
 .featured-card-icon {
-    width: 40px;
-    height: 40px;
-    margin: 0 auto 8px;
+    width: 40px; /* Adjusted size */
+    height: 40px; /* Adjusted size */
+    margin: 0 auto 8px; /* Reduced margin */
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #a569bd, #8e44ad); /* ألوان جديدة */
+    background: linear-gradient(135deg, #667eea, #764ba2);
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
 .featured-card-icon img {
-    width: 24px;
-    height: 24px;
+    width: 24px; /* Adjusted size */
+    height: 24px; /* Adjusted size */
     object-fit: contain;
     filter: brightness(1.1);
 }
@@ -178,7 +167,7 @@ body {
 .featured-card-content h3 {
     font-size: 1.2rem;
     font-weight: 600;
-    color: #8e44ad; /* لون جديد */
+    color: #006699;
     margin: 0;
     line-height: 1.2;
     white-space: nowrap;
@@ -188,13 +177,13 @@ body {
 
 .cards-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Single column for main cards */
     gap: 5px;
     margin-bottom: 15px;
 }
 
 .card {
-    background: rgba(244, 229, 247, 0.95); /* لون جديد */
+    background: rgba(240, 240, 240, 0.95);
     border-radius: 20px;
     padding: 15px;
     text-align: right;
@@ -209,6 +198,12 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-align: right;
+    height: 8in; /* Set height to 8 inches */
 }
 
 .card::before {
@@ -230,7 +225,6 @@ body {
     transform: translateY(-5px) scale(1.02);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
     background: rgba(255, 255, 255, 1);
-    border-color: #a569bd; /* لون جديد */
 }
 
 .card-icon {
@@ -240,7 +234,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #a569bd, #8e44ad); /* ألوان جديدة */
+    background: linear-gradient(135deg, #667eea, #764ba2);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     flex-shrink: 0;
 }
@@ -255,15 +249,14 @@ body {
 .card-content h3 {
     font-size: 1.5rem;
     font-weight: 600;
-    color: #8e44ad; /* لون جديد */
+    color: #006699;
     margin: 0;
     line-height: 1.3;
     text-align: right;
 }
-
 .sub-section {
     margin-bottom: 8px;
-    background: rgba(244, 229, 247, 0.9); /* لون جديد */
+    background: rgba(240, 240, 240, 0.9);
     padding: 15px;
     border-radius: 20px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
@@ -273,7 +266,7 @@ body {
 
 .sub-sections-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* صفان بدلاً من أربعة */
     gap: 5px;
     margin-bottom: 15px;
 }
@@ -287,18 +280,19 @@ body {
     border: 2px solid rgba(255, 255, 255, 0.3);
     overflow: hidden;
     transition: all 0.3s ease;
-    height: 80px;
-    width: 100%;
+    height: 80px; /* ارتفاع ثابت 80 بكسل */
+    width: 100%; /* عرض كامل */
     max-width: 400px;
     min-height: 40px;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: row; /* تغيير إلى صف لتوسيط المحتوى */
+    align-items: center; /* توسيط عمودي */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
+/* خلفيات مخصصة لكل بطاقة */
 .sub-sections-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -323,22 +317,22 @@ body {
 }
 
 .dropdown-card.movies-card {
-    background: rgba(165, 105, 189, 0.8); /* لون جديد */
+    background: rgba(102, 126, 234, 0.8);
     backdrop-filter: blur(10px);
 }
 
 .dropdown-card.sports-card {
-    background: rgba(142, 68, 173, 0.8); /* لون جديد */
+    background: rgba(52, 152, 219, 0.8);
     backdrop-filter: blur(10px);
 }
 
 .dropdown-card.video-design-card {
-    background: rgba(155, 89, 182, 0.8); /* لون جديد */
+    background: rgba(155, 89, 182, 0.8);
     backdrop-filter: blur(10px);
 }
 
 .dropdown-card.misc-card {
-    background: rgba(123, 36, 112, 0.8); /* لون جديد */
+    background: rgba(231, 76, 60, 0.8);
     backdrop-filter: blur(10px);
 }
 
@@ -379,9 +373,11 @@ body {
     display: none;
 }
 
+    font-size: 1.8rem;
+
 .dropdown-arrow {
     font-size: 1rem;
-    color: #a569bd; /* لون جديد */
+    color: #667eea;
     transition: transform 0.3s ease;
 }
 
@@ -426,7 +422,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #a569bd, #8e44ad); /* ألوان جديدة */
+    background: linear-gradient(135deg, #667eea, #764ba2);
     border-radius: 50%;
     color: white;
     flex-shrink: 0;
@@ -448,8 +444,8 @@ body {
 }
 
 .social-links a {
-    font-size: 1.5rem;
-    color: #a569bd; /* لون جديد */
+    font-size: 1.5rem; /* تم تقليل حجم الخط */
+    color: #667eea;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
@@ -460,21 +456,21 @@ body {
 }
 
 .social-links a:hover {
-    color: #8e44ad; /* لون جديد */
+    color: #764ba2;
     transform: scale(1.1);
 }
 
 /* Sub Sections */
 .sub-sections-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* صفان بدلاً من أربعة */
     gap: 5px;
     margin-bottom: 15px;
 }
 
 .sub-section {
     margin-bottom: 8px;
-    background: rgba(244, 229, 247, 0.9); /* لون جديد */
+    background: rgba(240, 240, 240, 0.9);
     padding: 15px;
     border-radius: 20px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
@@ -485,7 +481,7 @@ body {
 .section-title {
     font-size: 1.8rem;
     font-weight: 700;
-    color: #f0e6f2; /* لون جديد */
+    color: #2c3e50;
     margin-bottom: 25px;
     text-align: center;
     position: relative;
@@ -500,7 +496,7 @@ body {
     transform: translateX(-50%);
     width: 80px;
     height: 3px;
-    background: linear-gradient(135deg, #a569bd, #8e44ad); /* ألوان جديدة */
+    background: linear-gradient(135deg, #667eea, #764ba2);
     border-radius: 2px;
 }
 
@@ -511,22 +507,22 @@ body {
 }
 
 .sub-card {
-    background: rgba(244, 229, 247, 0.8); /* لون جديد */
+    background: rgba(240, 240, 240, 0.8);
     border-radius: 15px;
-    padding: 15px;
+    padding: 15px; /* Reduced padding */
     cursor: pointer;
     transition: all 0.3s ease;
-    border: 2px solid rgba(255, 255, 255, 0.8);
+    border: 2px solid rgba(255, 255, 255, 0.8); /* White border */
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 12px; /* Reduced gap */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    min-height: 60px;
+    min-height: 60px; /* Reduced height to half */
 }
 
 .sub-card:hover {
     transform: translateY(-5px);
-    border-color: #a569bd; /* لون جديد */
+    border-color: #667eea;
     background: rgba(250, 250, 250, 1);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
@@ -538,7 +534,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #a569bd, #8e44ad); /* ألوان جديدة */
+    background: linear-gradient(135deg, #667eea, #764ba2);
     border-radius: 50%;
     color: white;
     flex-shrink: 0;
@@ -553,7 +549,7 @@ body {
 
 /* Footer */
 .footer {
-    background: rgba(244, 229, 247, 0.95); /* لون جديد */
+    background: rgba(240, 240, 240, 0.95);
     border-radius: 20px;
     padding: 20px;
     text-align: center;
@@ -570,7 +566,7 @@ body {
 }
 
 .channel-info a {
-    color: #a569bd; /* لون جديد */
+    color: #667eea;
     text-decoration: none;
     font-size: 1.3rem;
     font-weight: 600;
@@ -578,7 +574,7 @@ body {
 }
 
 .channel-info a:hover {
-    color: #8e44ad; /* لون جديد */
+    color: #764ba2;
 }
 
 .copyright {
@@ -594,7 +590,7 @@ body {
 .recent-posts h2 {
     font-size: 1.8rem;
     font-weight: 700;
-    color: #f0e6f2; /* لون جديد */
+    color: #2c3e50;
     margin-bottom: 25px;
     text-align: center;
     position: relative;
@@ -609,18 +605,18 @@ body {
     transform: translateX(-50%);
     width: 80px;
     height: 3px;
-    background: linear-gradient(135deg, #a569bd, #8e44ad); /* ألوان جديدة */
+    background: linear-gradient(135deg, #667eea, #764ba2);
     border-radius: 2px;
 }
 
 .modern-posts-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Single column */
     gap: 5px;
 }
 
 .modern-post-card {
-    background: rgba(244, 229, 247, 0.95); /* لون جديد */
+    background: rgba(240, 240, 240, 0.95);
     border-radius: 15px;
     padding: 15px;
     cursor: pointer;
@@ -630,16 +626,16 @@ body {
     border: 2px solid rgba(255, 255, 255, 0.8);
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    height: 80px;
-    overflow: hidden;
+    justify-content: space-between; /* Space between content and arrow */
+    height: 80px; /* Fixed height */
+    overflow: hidden; /* Hide overflowing text */
 }
 
 .modern-post-card:hover {
     transform: translateY(-5px) scale(1.02);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
     background: rgba(250, 250, 250, 1);
-    border-color: #a569bd; /* لون جديد */
+    border-color: #667eea;
 }
 
 .modern-post-content {
@@ -647,7 +643,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    white-space: nowrap;
+    white-space: nowrap; /* Ensure text stays in one line */
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -673,13 +669,13 @@ body {
 
 .modern-post-arrow {
     font-size: 1.5rem;
-    color: #a569bd; /* لون جديد */
+    color: #667eea;
     margin-left: 10px;
 }
 
 /* Footer */
 .footer {
-    background: rgba(244, 229, 247, 0.95); /* لون جديد */
+    background: rgba(240, 240, 240, 0.95);
     border-radius: 20px;
     padding: 20px;
     text-align: center;
@@ -696,7 +692,7 @@ body {
 }
 
 .channel-info a {
-    color: #a569bd; /* لون جديد */
+    color: #667eea;
     text-decoration: none;
     font-size: 1.3rem;
     font-weight: 600;
@@ -704,7 +700,7 @@ body {
 }
 
 .channel-info a:hover {
-    color: #8e44ad; /* لون جديد */
+    color: #764ba2;
 }
 
 .copyright {
@@ -731,16 +727,16 @@ body {
     .subtitle {
         font-size: 0.9rem;
         font-weight: 600;
-        color: #4a154b; /* لون جديد */
+        color: #2c3e50;
     }
     
     .featured-cards-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
+        gap: 10px; /* Reduced gap */
     }
     
     .featured-card {
-        height: 80px;
+        height: 80px; /* Adjusted height */
         padding: 10px;
     }
     
@@ -759,7 +755,7 @@ body {
         font-size: 0.8rem;
         font-weight: 700;
         line-height: 1.2;
-        background: linear-gradient(135deg, #a569bd, #8e44ad); /* ألوان جديدة */
+        background: linear-gradient(135deg, #667eea, #764ba2);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -771,13 +767,13 @@ body {
     }
     
     .sub-sections-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr); /* صفان بدلاً من أربعة */
         gap: 10px;
     }
     
     .dropdown-card {
-        width: 100px;
-        height: 40px;
+        width: 100px; /* عرض  100 بكسل */
+        height: 40px; /* ارتفاع ثابت 40 بكسل */
         max-width: 400px;
         min-height: 40px;
     }
@@ -802,7 +798,7 @@ body {
         font-size: 1.2rem;
         font-weight: 700;
         line-height: 1.3;
-        background: linear-gradient(135deg, #a569bd, #8e44ad); /* ألوان جديدة */
+        background: linear-gradient(135deg, #667eea, #764ba2);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -831,7 +827,7 @@ body {
     .section-title {
         font-size: 1.6rem;
         font-weight: 800;
-        background: linear-gradient(135deg, #a569bd, #8e44ad); /* ألوان جديدة */
+        background: linear-gradient(135deg, #667eea, #764ba2);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -856,11 +852,11 @@ body {
     
     .featured-cards-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 8px;
+        gap: 8px; /* Reduced gap */
     }
     
     .featured-card {
-        height: 80px;
+        height: 80px; /* Adjusted height */
         padding: 8px;
     }
     
@@ -887,13 +883,13 @@ body {
     }
     
     .sub-sections-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr); /* صفان بدلاً من أربعة */
         gap: 8px;
     }
     
     .dropdown-card {
-        width: 100px;
-        height: 40px;
+        width: 100px; /* عرض  100 بكسل */
+        height: 40px; /* ارتفاع ثابت 40 بكسل */
         max-width: 400px;
         min-height: 40px;
     }
@@ -962,13 +958,13 @@ body {
     right: 30px;
     width: 50px;
     height: 50px;
-    background: linear-gradient(135deg, #a569bd, #8e44ad); /* ألوان جديدة */
+    background: linear-gradient(135deg, #667eea, #764ba2);
     color: white;
     border: none;
     border-radius: 50%;
     cursor: pointer;
     font-size: 1.2rem;
-    box-shadow: 0 4px 20px rgba(165, 105, 189, 0.3); /* لون جديد */
+    box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
     transition: all 0.3s ease;
     opacity: 0;
     visibility: hidden;
@@ -984,24 +980,24 @@ body {
 
 .back-to-top:hover {
     transform: translateY(-3px) scale(1.1);
-    box-shadow: 0 8px 30px rgba(165, 105, 189, 0.4); /* لون جديد */
-    background: linear-gradient(135deg, #8e44ad, #a569bd); /* ألوان جديدة */
+    box-shadow: 0 8px 30px rgba(102, 126, 234, 0.4);
+    background: linear-gradient(135deg, #764ba2, #667eea);
 }
 
 /* CSS لزر العودة للصفحة الرئيسية */
 .back-to-home {
     position: fixed;
-    bottom: 90px;
+    bottom: 90px; /* أعلى بـ 60 بكسل من زر العودة للأعلى (30px + 30px فاصل) */
     right: 30px;
     width: 50px;
     height: 50px;
-    background: linear-gradient(135deg, #a569bd, #8e44ad); /* ألوان جديدة */
+    background: linear-gradient(135deg, #2ecc71, #27ae60); /* لون أخضر جذاب */
     color: white;
     border: none;
     border-radius: 50%;
     cursor: pointer;
     font-size: 1.2rem;
-    box-shadow: 0 4px 20px rgba(165, 105, 189, 0.3); /* لون جديد */
+    box-shadow: 0 4px 20px rgba(46, 204, 113, 0.3);
     transition: all 0.3s ease;
     opacity: 1;
     visibility: visible;
@@ -1017,8 +1013,8 @@ body {
 
 .back-to-home:hover {
     transform: translateY(-3px) scale(1.1);
-    box-shadow: 0 8px 30px rgba(165, 105, 189, 0.4); /* لون جديد */
-    background: linear-gradient(135deg, #8e44ad, #a569bd); /* ألوان جديدة */
+    box-shadow: 0 8px 30px rgba(46, 204, 113, 0.4);
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
 }
 
 @media (max-width: 768px) {
@@ -1030,10 +1026,11 @@ body {
         font-size: 1.1rem;
     }
     .back-to-home {
-        bottom: 75px;
+        bottom: 75px; /* 20px + 35px فاصل */
         right: 20px;
         width: 45px;
         height: 45px;
         font-size: 1.1rem;
     }
-    }
+}
+
