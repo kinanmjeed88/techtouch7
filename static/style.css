@@ -765,3 +765,59 @@ body {
     font-size: 1.1rem;
   }
 }
+/* Social Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 12px; /* تم تقليل المسافة بين الأيقونات */
+    margin: 15px 0;
+}
+
+.social-links a {
+    font-size: 1.2rem; /* تم تصغير حجم الخط من 1.5rem */
+    color: var(--telegram-blue);
+    transition: all 0.3s ease;
+}
+
+.social-links a img {
+    width: 24px; /* تم تصغير الحجم من 30px */
+    height: 24px; /* تم تصغير الحجم من 30px */
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--telegram-light-blue);
+    transform: scale(1.1);
+}
+
+/* تعديلات حجم الأيقونات للجوال */
+@media (max-width: 768px) {
+    .social-links {
+        gap: 10px;
+    }
+    
+    .social-links a {
+        font-size: 1.1rem;
+    }
+    
+    .social-links a img {
+        width: 22px;
+        height: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .social-links {
+        gap: 8px;
+    }
+    
+    .social-links a {
+        font-size: 1rem;
+    }
+    
+    .social-links a img {
+        width: 20px;
+        height: 20px;
+    }
+        }
